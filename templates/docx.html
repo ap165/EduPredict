@@ -1,11 +1,296 @@
 <!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="EduPredict API documentation for CGPA, academic performance, and backlog-risk prediction endpoints.">
+    <title>EduPredict API Documentation</title>
+
+    <!-- Tailwind Play CDN: convenient for development. Compile Tailwind for production. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Page-specific styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/documentation.css') }}">
 </head>
-<body>
-    <h1>Documentation</h1>
+<body class="min-h-screen bg-slate-950 text-slate-200 antialiased">
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+
+    <header class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/85 backdrop-blur-xl">
+        <div class="mx-auto flex max-w-[1500px] items-center justify-between px-5 py-4 lg:px-8">
+            <a href="#overview" class="flex items-center gap-3" aria-label="EduPredict documentation home">
+                <span class="brand-mark">E</span>
+                <span>
+                    <span class="block text-base font-semibold tracking-tight text-white">EduPredict</span>
+                    <span class="block text-xs text-slate-400">API Documentation</span>
+                </span>
+            </a>
+            <div class="flex items-center gap-3">
+                <button id="mobile-nav-toggle" type="button" class="mobile-menu-button lg:hidden" aria-expanded="false" aria-controls="docs-sidebar">Menu</button>
+                <span class="hidden items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1.5 text-xs font-medium text-emerald-300 sm:inline-flex">
+                    <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                    REST API · v1
+                </span>
+                <a href="/" class="text-sm text-slate-400 transition hover:text-white">Home <span aria-hidden="true">↗</span></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="mx-auto grid max-w-[1500px] grid-cols-1 gap-8 px-5 py-8 lg:grid-cols-[245px_minmax(0,1fr)] lg:px-8 lg:py-10">
+        <aside id="docs-sidebar" class="lg:sticky lg:top-24 lg:h-[calc(100vh-7rem)]">
+            <nav class="rounded-2xl border border-white/10 bg-slate-900/65 p-4 shadow-2xl shadow-black/10" aria-label="Documentation navigation">
+                <label class="sr-only" for="docs-search">Search documentation</label>
+                <input id="docs-search" class="docs-search mb-4" type="search" placeholder="Search documentation..." autocomplete="off">
+                <p id="docs-search-empty" class="hidden px-3 pb-2 text-xs text-amber-300">No matching sections.</p>
+                <p class="eyebrow mb-3 px-3">GETTING STARTED</p>
+                <a class="nav-link active" href="#overview"><span class="nav-icon">⌂</span> Overview</a>
+                <a class="nav-link" href="#authentication"><span class="nav-icon">◇</span> Authentication</a>
+                <a class="nav-link" href="#requests"><span class="nav-icon">{ }</span> Request format</a>
+
+                <p class="eyebrow mb-3 mt-7 px-3">PREDICTION ENDPOINTS</p>
+                <a class="nav-link" href="#cgpa"><span class="method-dot post"></span> CGPA prediction</a>
+                <a class="nav-link" href="#performance"><span class="method-dot post"></span> Performance prediction</a>
+                <a class="nav-link" href="#backlog"><span class="method-dot post"></span> Backlog risk</a>
+                <a class="nav-link" href="#playground"><span class="nav-icon">▶</span> API playground</a>
+
+                <p class="eyebrow mb-3 mt-7 px-3">REFERENCE</p>
+                <a class="nav-link" href="#errors"><span class="nav-icon">!</span> Errors & responses</a>
+                <a class="nav-link" href="#integration"><span class="nav-icon">↗</span> Frontend integration</a>
+            </nav>
+            <div class="mt-4 rounded-2xl border border-indigo-400/15 bg-indigo-400/[0.06] p-4">
+                <p class="text-sm font-semibold text-indigo-200">Need a quick test?</p>
+                <p class="mt-1 text-xs leading-5 text-slate-400">Run the Flask application, then send a POST request to one of the endpoints below.</p>
+                <code class="mt-3 block rounded-lg bg-slate-950/80 px-3 py-2 text-xs text-indigo-200">http://127.0.0.1:5000</code>
+            </div>
+        </aside>
+
+        <main class="min-w-0">
+            <section id="overview" class="scroll-mt-28">
+                <div class="mb-5 flex flex-wrap items-center gap-2">
+                    <span class="tag tag-indigo">API REFERENCE</span>
+                    <span class="tag tag-slate">Version 1.0</span>
+                </div>
+                <h1 class="max-w-4xl text-4xl font-semibold tracking-tight text-white sm:text-5xl">EduPredict <span class="text-gradient">API</span></h1>
+                <p class="mt-5 max-w-3xl text-base leading-8 text-slate-400 sm:text-lg">A machine-learning API for predicting students' next-semester CGPA, classifying academic performance, and estimating backlog risk.</p>
+
+                <div class="mt-8 grid gap-4 sm:grid-cols-3">
+                    <div class="stat-card"><span class="stat-label">PREDICTION ENDPOINTS</span><span class="stat-value">03</span><span class="stat-note">CGPA · Performance · Backlog</span></div>
+                    <div class="stat-card"><span class="stat-label">HTTP METHOD</span><span class="stat-value">POST</span><span class="stat-note">JSON request body</span></div>
+                    <div class="stat-card"><span class="stat-label">API PREFIX</span><span class="stat-value text-2xl">/api/v1</span><span class="stat-note">Versioned routes</span></div>
+                </div>
+
+                <div class="section-card mt-8">
+                    <div class="flex flex-wrap items-center justify-between gap-3">
+                        <div>
+                            <p class="eyebrow">BASE URL · LOCAL DEVELOPMENT</p>
+                            <code class="mt-2 block text-lg font-semibold text-white">http://127.0.0.1:5000</code>
+                        </div>
+                        <button class="copy-button" data-copy="http://127.0.0.1:5000">Copy base URL</button>
+                    </div>
+                    <div class="mt-5 border-t border-white/10 pt-4">
+                        <p class="eyebrow mb-3">AVAILABLE ENDPOINTS</p>
+                        <div class="space-y-2">
+                            <div class="endpoint-row"><span class="method-badge">POST</span><code>/api/v1/predictions/cgpa</code><span class="endpoint-desc">Predict CGPA</span></div>
+                            <div class="endpoint-row"><span class="method-badge">POST</span><code>/api/v1/predictions/performance</code><span class="endpoint-desc">Classify performance</span></div>
+                            <div class="endpoint-row"><span class="method-badge">POST</span><code>/api/v1/predictions/backlog-risk</code><span class="endpoint-desc">Predict backlog status</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="authentication" class="doc-section scroll-mt-28">
+                <div class="section-heading"><span class="section-number">01</span><div><h2>Authentication</h2><p>The current prediction routes do not require an API key or login.</p></div></div>
+                <div class="notice notice-info"><span class="notice-icon">i</span><p><strong>No authentication required:</strong> send requests directly to the endpoints. Add authentication and rate limiting before exposing the API publicly.</p></div>
+            </section>
+
+            <section id="requests" class="doc-section scroll-mt-28">
+                <div class="section-heading"><span class="section-number">02</span><div><h2>Request format</h2><p>All prediction endpoints accept a JSON object in the request body.</p></div></div>
+                <div class="grid gap-4 md:grid-cols-2">
+                    <div class="mini-card"><p class="eyebrow">CONTENT TYPE</p><code class="mt-2 block text-sm text-white">Content-Type: application/json</code></div>
+                    <div class="mini-card"><p class="eyebrow">HTTP METHOD</p><code class="mt-2 block text-sm text-white">POST</code></div>
+                </div>
+                <p class="mt-4 text-sm leading-7 text-slate-400">Send the feature names exactly as shown in each endpoint's request example. Values must use the same formats and categories used when the corresponding model was trained.</p>
+            </section>
+
+            <section id="cgpa" class="doc-section scroll-mt-28">
+                <div class="section-heading"><span class="section-number">03</span><div><div class="flex flex-wrap items-center gap-3"><h2>CGPA prediction</h2><span class="method-badge">POST</span></div><p>Predict a student's next-semester CGPA on a 10-point scale.</p></div></div>
+                <div class="route-bar"><code>/api/v1/predictions/cgpa</code><div class="flex flex-wrap items-center gap-2"><button class="try-button" type="button" data-try-endpoint="cgpa">Try this endpoint</button><button class="copy-button" data-copy="/api/v1/predictions/cgpa">Copy route</button></div></div>
+                <h3 class="subheading">Request body</h3>
+                <div class="code-card">
+                    <div class="code-toolbar"><span>JSON</span><button class="copy-button" data-copy-target="cgpa-request">Copy</button></div>
+                    <pre id="cgpa-request"><code>{
+  "class_12_percentage": 79,
+  "class_10_percentage": 75,
+  "family_income": "Upper middle (30,000-50,000)",
+  "hometown": "City",
+  "exam_preparation": "2-3 Hours",
+  "gaming_hours": "0-1 Hour",
+  "attendance_percentage": "80%-100%",
+  "previous_semester_cgpa": 8.2
+}</code></pre>
+                </div>
+                <h3 class="subheading">Input parameters</h3>
+                <div class="table-wrap"><table><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody>
+                    <tr><td><code>class_12_percentage</code></td><td>Number</td><td>Class 12 percentage.</td></tr>
+                    <tr><td><code>class_10_percentage</code></td><td>Number</td><td>Class 10 percentage.</td></tr>
+                    <tr><td><code>family_income</code></td><td>String</td><td>Income category used in training data.</td></tr>
+                    <tr><td><code>hometown</code></td><td>String</td><td>For example, <code>City</code> or <code>Village</code>.</td></tr>
+                    <tr><td><code>exam_preparation</code></td><td>String</td><td>For example, <code>0-1 Hour</code>, <code>2-3 Hours</code>, <code>More than 3 Hours</code>.</td></tr>
+                    <tr><td><code>gaming_hours</code></td><td>String</td><td>Gaming-time category used in training data.</td></tr>
+                    <tr><td><code>attendance_percentage</code></td><td>String</td><td>Attendance band, for example <code>80%-100%</code>.</td></tr>
+                    <tr><td><code>previous_semester_cgpa</code></td><td>Number</td><td>Previous semester CGPA, on a 0–10 scale.</td></tr>
+                </tbody></table></div>
+                <h3 class="subheading">Example response</h3>
+                <div class="code-card"><div class="code-toolbar"><span>200 · JSON</span><button class="copy-button" data-copy-target="cgpa-response">Copy</button></div><pre id="cgpa-response"><code>{
+  "success": true,
+  "prediction": {
+    "predicted_next_semester_cgpa": 8.35
+  }
+}</code></pre></div>
+            </section>
+
+            <section id="performance" class="doc-section scroll-mt-28">
+                <div class="section-heading"><span class="section-number">04</span><div><div class="flex flex-wrap items-center gap-3"><h2>Performance prediction</h2><span class="method-badge">POST</span></div><p>Classify the student's expected academic performance category.</p></div></div>
+                <div class="route-bar"><code>/api/v1/predictions/performance</code><div class="flex flex-wrap items-center gap-2"><button class="try-button" type="button" data-try-endpoint="performance">Try this endpoint</button><button class="copy-button" data-copy="/api/v1/predictions/performance">Copy route</button></div></div>
+                <div class="notice notice-info mb-5"><span class="notice-icon">↳</span><p>This endpoint uses the same eight input fields and value formats as the CGPA prediction endpoint.</p></div>
+                <h3 class="subheading">Request body</h3>
+                <div class="code-card"><div class="code-toolbar"><span>JSON</span><button class="copy-button" data-copy-target="performance-request">Copy</button></div><pre id="performance-request"><code>{
+  "class_12_percentage": 79,
+  "class_10_percentage": 75,
+  "family_income": "Upper middle (30,000-50,000)",
+  "hometown": "City",
+  "exam_preparation": "2-3 Hours",
+  "gaming_hours": "0-1 Hour",
+  "attendance_percentage": "80%-100%",
+  "previous_semester_cgpa": 8.2
+}</code></pre></div>
+                <h3 class="subheading">Example response</h3>
+                <div class="code-card"><div class="code-toolbar"><span>200 · JSON</span><button class="copy-button" data-copy-target="performance-response">Copy</button></div><pre id="performance-response"><code>{
+  "success": true,
+  "prediction": {
+    "performance": "Very Good"
+  }
+}</code></pre></div>
+                <p class="mt-3 text-xs leading-6 text-slate-500">Possible categories: Excellent, Very Good, Good, Average, and Poor. The exact result is returned by the trained model.</p>
+            </section>
+
+            <section id="backlog" class="doc-section scroll-mt-28">
+                <div class="section-heading"><span class="section-number">05</span><div><div class="flex flex-wrap items-center gap-3"><h2>Backlog risk prediction</h2><span class="method-badge">POST</span></div><p>Predict whether the student is classified as Backlog or No Backlog.</p></div></div>
+                <div class="route-bar"><code>/api/v1/predictions/backlog-risk</code><div class="flex flex-wrap items-center gap-2"><button class="try-button" type="button" data-try-endpoint="backlog">Try this endpoint</button><button class="copy-button" data-copy="/api/v1/predictions/backlog-risk">Copy route</button></div></div>
+                <h3 class="subheading">Request body</h3>
+                <div class="code-card"><div class="code-toolbar"><span>JSON</span><button class="copy-button" data-copy-target="backlog-request">Copy</button></div><pre id="backlog-request"><code>{
+  "previous_semester_cgpa": 6.8,
+  "attendance_percentage": 65,
+  "previous_backlogs": 1,
+  "study_time_hours_per_day": 2.5
+}</code></pre></div>
+                <h3 class="subheading">Input parameters</h3>
+                <div class="table-wrap"><table><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody>
+                    <tr><td><code>previous_semester_cgpa</code></td><td>Number</td><td>Previous semester CGPA, on a 0–10 scale.</td></tr>
+                    <tr><td><code>attendance_percentage</code></td><td>Number</td><td>Attendance percentage from 0 to 100.</td></tr>
+                    <tr><td><code>previous_backlogs</code></td><td>Integer</td><td>Number of previous backlogs.</td></tr>
+                    <tr><td><code>study_time_hours_per_day</code></td><td>Number</td><td>Average study hours per day.</td></tr>
+                </tbody></table></div>
+                <h3 class="subheading">Example response</h3>
+                <div class="code-card"><div class="code-toolbar"><span>200 · JSON</span><button class="copy-button" data-copy-target="backlog-response">Copy</button></div><pre id="backlog-response"><code>{
+  "success": true,
+  "prediction": {
+    "backlog_status": "No Backlog"
+  }
+}</code></pre></div>
+                <div class="notice notice-warning mt-5"><span class="notice-icon">!</span><p><strong>Prototype limitation:</strong> the backlog model was trained using synthetic records and synthetic labels. Its output is for project demonstration and must not be treated as a validated real-world failure-risk assessment.</p></div>
+            </section>
+
+            <section id="playground" class="doc-section scroll-mt-28">
+                <div class="section-heading"><span class="section-number">06</span><div><h2>API playground</h2><p>Send a real request to your running Flask API and inspect the JSON response without leaving this page.</p></div></div>
+                <div class="notice notice-warning mb-5"><span class="notice-icon">!</span><p><strong>Local API required:</strong> start EduPredict with <code>python main.py</code> before sending a request. This playground sends requests to the same origin that served this documentation page.</p></div>
+                <div class="playground-card">
+                    <div class="playground-topbar">
+                        <div><p class="eyebrow">REQUEST BUILDER</p><h3 class="mt-1 text-lg font-semibold text-white">Test an endpoint</h3></div>
+                        <span class="method-badge">POST · JSON</span>
+                    </div>
+                    <label class="playground-label" for="playground-endpoint">Endpoint</label>
+                    <select id="playground-endpoint" class="playground-select">
+                        <option value="cgpa">POST /api/v1/predictions/cgpa</option>
+                        <option value="performance">POST /api/v1/predictions/performance</option>
+                        <option value="backlog">POST /api/v1/predictions/backlog-risk</option>
+                    </select>
+                    <div class="mt-5 flex flex-wrap items-center justify-between gap-2">
+                        <label class="playground-label" for="playground-body">Request body</label>
+                        <button id="reset-playground" class="copy-button" type="button">Reset example</button>
+                    </div>
+                    <textarea id="playground-body" class="playground-textarea" spellcheck="false" aria-describedby="playground-hint"></textarea>
+                    <p id="playground-hint" class="mt-2 text-xs leading-5 text-slate-500">Edit the JSON if needed. Field names and categorical values must match the model's training data.</p>
+                    <div class="mt-4 flex flex-wrap items-center gap-3">
+                        <button id="send-request" class="send-button" type="button"><span aria-hidden="true">▶</span> Send request</button>
+                        <span id="request-status" class="request-status" role="status" aria-live="polite">Ready to test</span>
+                    </div>
+                    <div class="response-panel mt-6">
+                        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-white/10 px-4 py-3">
+                            <div class="flex items-center gap-2"><span class="eyebrow">RESPONSE</span><span id="response-code" class="response-code">—</span></div>
+                            <button id="copy-response" class="copy-button" type="button" disabled>Copy response</button>
+                        </div>
+                        <pre id="response-output" class="response-output" aria-live="polite">Your API response will appear here.</pre>
+                    </div>
+                </div>
+            </section>
+
+            <section id="errors" class="doc-section scroll-mt-28">
+                <div class="section-heading"><span class="section-number">07</span><div><h2>Errors & responses</h2><p>Responses use JSON so they can be handled easily by web and mobile clients.</p></div></div>
+                <h3 class="subheading">Error response format</h3>
+                <div class="code-card"><div class="code-toolbar"><span>JSON · Example</span><button class="copy-button" data-copy-target="error-response">Copy</button></div><pre id="error-response"><code>{
+  "success": false,
+  "error": "Description of the error"
+}</code></pre></div>
+                <div class="table-wrap mt-4"><table><thead><tr><th>Status</th><th>Meaning</th></tr></thead><tbody>
+                    <tr><td><span class="status-code">200</span></td><td>Prediction request completed successfully.</td></tr>
+                    <tr><td><span class="status-code status-warning">400</span></td><td>The request could not be processed. Check the JSON body and input values.</td></tr>
+                    <tr><td><span class="status-code status-muted">404</span></td><td>The requested route does not exist.</td></tr>
+                    <tr><td><span class="status-code status-muted">500</span></td><td>Unexpected server-side error.</td></tr>
+                </tbody></table></div>
+                <p class="mt-3 text-xs leading-6 text-slate-500">The 400 error format reflects the route handlers shown in this project setup. Ensure your Flask error handlers return the same format if you add more validation.</p>
+            </section>
+
+            <section id="integration" class="doc-section scroll-mt-28">
+                <div class="section-heading"><span class="section-number">08</span><div><h2>Frontend integration</h2><p>Example of calling the CGPA endpoint from browser JavaScript.</p></div></div>
+                <div class="code-card"><div class="code-toolbar"><span>JavaScript · Fetch</span><button class="copy-button" data-copy-target="fetch-example">Copy</button></div><pre id="fetch-example"><code>const response = await fetch(
+  "/api/v1/predictions/cgpa",
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      class_12_percentage: 79,
+      class_10_percentage: 75,
+      family_income: "Upper middle (30,000-50,000)",
+      hometown: "City",
+      exam_preparation: "2-3 Hours",
+      gaming_hours: "0-1 Hour",
+      attendance_percentage: "80%-100%",
+      previous_semester_cgpa: 8.2
+    })
+  }
+);
+
+const result = await response.json();
+console.log(result);</code></pre></div>
+                <p class="mt-3 text-sm leading-7 text-slate-400">When the frontend is served by the same Flask application, a relative URL such as <code>/api/v1/predictions/cgpa</code> is sufficient.</p>
+            </section>
+
+            <footer class="mt-16 border-t border-white/10 py-8">
+                <div class="flex flex-col justify-between gap-3 text-xs text-slate-500 sm:flex-row">
+                    <p>© <span id="year"></span> EduPredict · API Documentation</p>
+                    <p>Built with Flask · Tailwind CSS</p>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite">Copied to clipboard</div>
+
+    <script src="{{ url_for('static', filename='js/documentation.js') }}" defer></script>
+
 </body>
 </html>

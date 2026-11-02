@@ -1,11 +1,248 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="EduPredict brings together CGPA forecasting, academic performance classification, and backlog-risk prediction in one place.">
+    <title>EduPredict — Student Academic Insights</title>
+
+    <!-- Tailwind Play CDN for development. Compile Tailwind before production deployment. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
 </head>
-<body>
-    Hello World
+<body class="min-h-screen bg-slate-950 text-slate-200 antialiased">
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+
+    <header class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/85 backdrop-blur-xl">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+            <a href="/" class="flex items-center gap-3" aria-label="EduPredict home">
+                <span class="brand-mark">E</span>
+                <span>
+                    <span class="block text-base font-semibold tracking-tight text-white">EduPredict</span>
+                    <span class="block text-xs text-slate-400">Student academic insights</span>
+                </span>
+            </a>
+            <nav class="flex items-center gap-3" aria-label="Main navigation">
+                <span class="hidden items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1.5 text-xs font-medium text-emerald-300 sm:inline-flex">
+                    <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                    3 prediction models
+                </span>
+                <a href="/api/v1/" class="nav-docs-link">API documentation <span aria-hidden="true">↗</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="mx-auto max-w-7xl px-5 pb-16 pt-10 lg:px-8 lg:pt-14">
+        <section class="hero-section">
+            <div class="mb-5 flex flex-wrap items-center gap-2">
+                <span class="tag tag-indigo">ACADEMIC INTELLIGENCE</span>
+                <span class="tag tag-slate">ONE FORM · THREE PREDICTIONS</span>
+            </div>
+            <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_310px] lg:items-end">
+                <div>
+                    <h1 class="max-w-4xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                        Understand the <span class="text-gradient">bigger picture.</span>
+                    </h1>
+                    <p class="mt-5 max-w-3xl text-base leading-8 text-slate-400 sm:text-lg">
+                        Enter a student's academic details once. EduPredict sends the information to three machine-learning models and brings all three predictions together.
+                    </p>
+                </div>
+                <div class="hero-side-card">
+                    <p class="eyebrow">ONE SUBMISSION</p>
+                    <div class="mt-3 flex items-center gap-3">
+                        <div class="hero-count">03</div>
+                        <div>
+                            <p class="font-semibold text-white">Model predictions</p>
+                            <p class="mt-1 text-xs leading-5 text-slate-400">CGPA · Performance · Backlog risk</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 h-px bg-white/10"></div>
+                    <p class="mt-3 text-xs leading-5 text-slate-500">All three API requests run together after you submit the form.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-10 grid gap-6 xl:grid-cols-[minmax(0,1.12fr)_minmax(360px,.88fr)] xl:items-start">
+            <div class="form-panel">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">STUDENT PROFILE</p>
+                        <h2 class="mt-2 text-xl font-semibold tracking-tight text-white sm:text-2xl">Enter academic details</h2>
+                        <p class="mt-2 text-sm leading-6 text-slate-400">The shared fields are converted into the input formats expected by each model.</p>
+                    </div>
+                    <span class="form-step">01 <span>/</span> 01</span>
+                </div>
+
+                <form id="prediction-form" class="mt-7" novalidate>
+                    <div class="form-section-title">
+                        <span class="section-icon">01</span>
+                        <div>
+                            <h3>Academic record</h3>
+                            <p>Previous academic results and attendance.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 grid gap-5 sm:grid-cols-2">
+                        <div class="field-group">
+                            <label for="class_12_percentage">Class 12 percentage <span>*</span></label>
+                            <div class="input-wrap"><input id="class_12_percentage" name="class_12_percentage" type="number" min="0" max="100" step="0.01" placeholder="e.g. 79" required><span class="input-suffix">%</span></div>
+                            <p class="field-hint">Enter a value from 0 to 100.</p>
+                        </div>
+                        <div class="field-group">
+                            <label for="class_10_percentage">Class 10 percentage <span>*</span></label>
+                            <div class="input-wrap"><input id="class_10_percentage" name="class_10_percentage" type="number" min="0" max="100" step="0.01" placeholder="e.g. 75" required><span class="input-suffix">%</span></div>
+                            <p class="field-hint">Enter a value from 0 to 100.</p>
+                        </div>
+                        <div class="field-group">
+                            <label for="previous_semester_cgpa">Previous semester CGPA <span>*</span></label>
+                            <div class="input-wrap"><input id="previous_semester_cgpa" name="previous_semester_cgpa" type="number" min="0" max="10" step="0.01" placeholder="e.g. 8.2" required><span class="input-suffix">/ 10</span></div>
+                            <p class="field-hint">Use your college's 10-point CGPA scale.</p>
+                        </div>
+                        <div class="field-group">
+                            <label for="attendance_percentage">Attendance percentage <span>*</span></label>
+                            <div class="input-wrap"><input id="attendance_percentage" name="attendance_percentage" type="number" min="0" max="100" step="1" placeholder="e.g. 82" required><span class="input-suffix">%</span></div>
+                            <p class="field-hint">Used as a percentage for backlog prediction and mapped to the trained category for the other models.</p>
+                        </div>
+                        <div class="field-group sm:col-span-2">
+                            <label for="previous_backlogs">Previous backlogs <span>*</span></label>
+                            <select id="previous_backlogs" name="previous_backlogs" required>
+                                <option value="" disabled selected>Select previous backlog count</option>
+                                <option value="0">0 — No previous backlogs</option>
+                                <option value="1">1 backlog</option>
+                                <option value="2">2 backlogs</option>
+                                <option value="3">3 backlogs</option>
+                                <option value="4">4 or more backlogs</option>
+                            </select>
+                            <p class="field-hint">The current backlog model was trained with values from 0 to 4.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-divider"></div>
+
+                    <div class="form-section-title">
+                        <span class="section-icon">02</span>
+                        <div>
+                            <h3>Study habits & background</h3>
+                            <p>Additional features used by the CGPA and performance models.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 grid gap-5 sm:grid-cols-2">
+                        <div class="field-group">
+                            <label for="study_time">Daily study / exam preparation <span>*</span></label>
+                            <select id="study_time" name="study_time" required>
+                                <option value="" disabled selected>Select study time</option>
+                                <option value="0-1 Hour">0–1 hour</option>
+                                <option value="2-3 Hours">2–3 hours</option>
+                                <option value="More than 3 Hours">More than 3 hours</option>
+                            </select>
+                            <p class="field-hint">Mapped to the matching numeric value for backlog prediction.</p>
+                        </div>
+                        <div class="field-group">
+                            <label for="gaming_hours">Gaming hours <span>*</span></label>
+                            <select id="gaming_hours" name="gaming_hours" required>
+                                <option value="" disabled selected>Select gaming time</option>
+                                <option value="0-1 Hour">0–1 hour</option>
+                                <option value="2-3 Hours">2–3 hours</option>
+                                <option value="More than 3 Hours">More than 3 hours</option>
+                            </select>
+                            <p class="field-hint">Select the category that best describes daily gaming time.</p>
+                        </div>
+                        <div class="field-group">
+                            <label for="family_income">Family income <span>*</span></label>
+                            <select id="family_income" name="family_income" required>
+                                <option value="" disabled selected>Select income range</option>
+                                <option value="Low (Below 15,000)">Low (Below ₹15,000)</option>
+                                <option value="Lower middle (15,000-30,000)">Lower middle (₹15,000–30,000)</option>
+                                <option value="Upper middle (30,000-50,000)">Upper middle (₹30,000–50,000)</option>
+                                <option value="High (Above 50,000)">High (Above ₹50,000)</option>
+                            </select>
+                            <p class="field-hint">Choose the category used in the training dataset.</p>
+                        </div>
+                        <div class="field-group">
+                            <label for="hometown">Hometown <span>*</span></label>
+                            <select id="hometown" name="hometown" required>
+                                <option value="" disabled selected>Select hometown type</option>
+                                <option value="City">City</option>
+                                <option value="Village">Village</option>
+                            </select>
+                            <p class="field-hint">Select the category that best matches your hometown.</p>
+                        </div>
+                    </div>
+
+                    <div id="form-error" class="form-error hidden" role="alert"></div>
+
+                    <div class="mt-8 flex flex-col-reverse gap-3 sm:flex-row sm:items-center sm:justify-between">
+                        <button id="reset-form" class="secondary-button" type="reset">Reset form</button>
+                        <button id="predict-button" class="primary-button" type="submit">
+                            <span class="button-label">Generate all predictions</span>
+                            <span class="button-arrow" aria-hidden="true">→</span>
+                        </button>
+                    </div>
+                    <p class="mt-4 text-center text-xs leading-5 text-slate-500">Submitting sends your details to all three prediction endpoints at the same time.</p>
+                </form>
+            </div>
+
+            <aside class="results-column">
+                <div class="results-intro">
+                    <p class="eyebrow">PREDICTION SUMMARY</p>
+                    <div class="mt-2 flex items-center justify-between gap-3">
+                        <h2 class="text-xl font-semibold tracking-tight text-white">Your results</h2>
+                        <span id="results-state" class="results-state"><span class="state-dot"></span> Waiting for input</span>
+                    </div>
+                    <p class="mt-2 text-sm leading-6 text-slate-400">All three predictions will appear here after one submission.</p>
+                </div>
+
+                <div id="results-grid" class="mt-5 space-y-4" aria-live="polite" aria-busy="false">
+                    <article class="result-card result-cgpa" data-result-card="cgpa">
+                        <div class="result-card-top"><span class="result-icon">↗</span><span class="result-type">REGRESSION</span></div>
+                        <p class="mt-4 text-sm font-medium text-slate-300">Next-semester CGPA</p>
+                        <div class="result-value result-placeholder" id="cgpa-result">—</div>
+                        <p class="result-caption" id="cgpa-caption">Predicted CGPA on a 10-point scale.</p>
+                        <div class="result-card-foot"><span class="result-status" id="cgpa-status">Not run yet</span><span class="result-endpoint">/predictions/cgpa</span></div>
+                    </article>
+
+                    <article class="result-card result-performance" data-result-card="performance">
+                        <div class="result-card-top"><span class="result-icon">◈</span><span class="result-type">CLASSIFICATION</span></div>
+                        <p class="mt-4 text-sm font-medium text-slate-300">Academic performance</p>
+                        <div class="result-value result-placeholder result-category" id="performance-result">—</div>
+                        <p class="result-caption" id="performance-caption">Predicted academic performance category.</p>
+                        <div class="result-card-foot"><span class="result-status" id="performance-status">Not run yet</span><span class="result-endpoint">/predictions/performance</span></div>
+                    </article>
+
+                    <article class="result-card result-backlog" data-result-card="backlog">
+                        <div class="result-card-top"><span class="result-icon">!</span><span class="result-type">BINARY CLASSIFICATION</span></div>
+                        <p class="mt-4 text-sm font-medium text-slate-300">Backlog prediction</p>
+                        <div class="result-value result-placeholder result-category" id="backlog-result">—</div>
+                        <p class="result-caption" id="backlog-caption">Predicted backlog status.</p>
+                        <div class="result-card-foot"><span class="result-status" id="backlog-status">Not run yet</span><span class="result-endpoint">/predictions/backlog-risk</span></div>
+                    </article>
+                </div>
+
+                <div class="results-note mt-4">
+                    <span class="notice-mark">i</span>
+                    <p><strong>Model limitation:</strong> The backlog classifier was trained using synthetic records and labels. Treat its output as a project demonstration, not a validated real-world risk assessment.</p>
+                </div>
+                <div id="results-actions" class="mt-4 hidden">
+                    <button id="run-again" type="button" class="secondary-button w-full">Run another prediction</button>
+                </div>
+            </aside>
+        </section>
+
+        <section class="mt-12 grid gap-4 md:grid-cols-3">
+            <div class="feature-card"><span class="feature-number">01</span><h3>One shared form</h3><p>Enter the student's information once instead of submitting separate forms for each model.</p></div>
+            <div class="feature-card"><span class="feature-number">02</span><h3>Three concurrent requests</h3><p>JavaScript calls all three Flask prediction endpoints together after submission.</p></div>
+            <div class="feature-card"><span class="feature-number">03</span><h3>Unified results</h3><p>CGPA, performance category, and backlog status are presented together in one results panel.</p></div>
+        </section>
+
+        <footer class="mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+            <p>© <span id="current-year"></span> EduPredict. Student academic prediction project.</p>
+            <a href="/api/v1/" class="footer-link">Explore API documentation <span aria-hidden="true">↗</span></a>
+        </footer>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="{{ url_for('static', filename='js/home.js') }}" defer></script>
 </body>
 </html>
