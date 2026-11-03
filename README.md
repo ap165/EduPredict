@@ -249,8 +249,6 @@ The `python_notebook/` directory contains the notebook used for preprocessing, c
 
 The CGPA and performance models use the student academic dataset. The performance target is created from next-semester CGPA using the category thresholds shown above.
 
-**Important:** The backlog dataset contains 493 synthetically generated records. Its `Backlog` / `No Backlog` labels are generated from assumed relationships between the input features; they are not verified historical examination outcomes. The backlog model is therefore a development/demo component and must be validated with real student data before being used for real academic risk assessment. Its reported test score should not be interpreted as real-world accuracy.
-
 The notebook reads data from `datasets/raw/` and `datasets/formatted/` paths in some cells. When rerunning it, place the CSV files in the expected folders or update the paths in the notebook to match the repository's `datasets/` layout.
 
 ## Disclaimer
