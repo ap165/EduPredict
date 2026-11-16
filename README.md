@@ -1,21 +1,22 @@
 # EduPredict
 
-EduPredict is a student academic prediction project built with Python and Flask. It uses three machine learning models to estimate a student's next-semester CGPA, classify academic performance, and predict backlog status.
+EduPredict is a student academic prediction project built with Python and Flask. It brings together four machine-learning models to estimate a student's next-semester CGPA, classify academic performance, predict backlog status, and suggest a broad career path based on an academic and interest profile.
 
 ## Live Application
 
 - **Website:** https://edu-predict-two.vercel.app
 - **API Documentation:** https://edu-predict-two.vercel.app/api/v1/
 
-The home page collects student information once and sends it to all three prediction endpoints. The results are then displayed together.
+The home page collects student information through one unified form and sends the relevant inputs to all four prediction endpoints. The results are displayed together in a single dashboard.
 
 ## Features
 
 - **CGPA Prediction:** Predicts the student's next-semester CGPA on a 10-point scale.
 - **Performance Prediction:** Classifies predicted academic performance as Excellent, Very Good, Good, Average, or Poor.
 - **Backlog Risk Prediction:** Predicts Backlog or No Backlog using previous CGPA, attendance, previous backlogs, and daily study time.
+- **Career Path Prediction:** Recommends a broad career domain using academic performance, skills, interests, projects, internship experience, and career preference.
 - **API Documentation:** Includes endpoint details and example requests.
-- **Combined Dashboard:** Submits the shared form data to all three models and displays the responses dynamically.
+- **Unified Dashboard:** Collects the student's information once, calls all four prediction endpoints concurrently, and displays the responses together.
 
 ## Machine Learning Models
 
@@ -24,6 +25,7 @@ The home page collects student information once and sends it to all three predic
 | CGPA | Regression | Extra Trees Regressor | Next-semester CGPA (0–10) |
 | Performance | Classification | Random Forest Classifier | Excellent / Very Good / Good / Average / Poor |
 | Backlog risk | Binary classification | K-Neighbors Classifier | Backlog / No Backlog |
+| Career path | Multi-class classification | Logistic Regression | Recommended career domain |
 
 ### Model inputs
 
@@ -52,15 +54,52 @@ Categorical values expected by the training data:
 - `previous_backlogs` — previous backlog count
 - `study_time_hours_per_day` — daily study hours
 
+**Career Path model** uses the following eleven inputs. The field names are the exact feature names expected by the career-path model:
+
+- `CGPA (out of 10)` — CGPA on a 10-point scale
+- `Coding Rating` — coding skill rating
+- `Public Speaking Rating` — public-speaking rating
+- `Interested Subjects` — subjects the student is interested in
+- `Career Area` — the student's preferred or current career area
+- `Can Work Long` — whether the student is comfortable with extended work periods
+- `Mathematics (%)` — mathematics score or percentage
+- `Project Count` — number of completed projects
+- `Project Focus` — areas or technologies covered by the projects
+- `Internship` — internship experience
+- `Career Preference` — `Job` or `Higher Studies`
+
+An illustrative Career Path request:
+
+```json
+{
+  "CGPA (out of 10)": 8.4,
+  "Coding Rating": 8,
+  "Public Speaking Rating": 6,
+  "Interested Subjects": "Programming",
+  "Career Area": "Developer",
+  "Can Work Long": "Yes",
+  "Mathematics (%)": 85,
+  "Project Count": 3,
+  "Project Focus": "Programming; Web Technologies",
+  "Internship": "Yes",
+  "Career Preference": "Job"
+}
+```
+
+The career-path model groups job-role labels into broad domains, such as Software & Application Development, Data & Database Systems, Cybersecurity & Networking, Cloud & IT Infrastructure, Business & IT Management, QA & Testing, and UI/UX & Product Design.
+
 ### Model evaluation
 
-The notebook compares multiple candidate algorithms using cross-validation before selecting a model. The selected models were evaluated on a held-out test split.
+The notebooks compare candidate algorithms using cross-validation and evaluate selected models on held-out test data. The reported results are:
 
 | Model | Evaluation from the notebook |
 |---|---|
 | CGPA | MAE: 0.3454, RMSE: 0.4957, R²: 0.8947 |
 | Performance | Accuracy: 0.7879, Macro F1: 0.7825 |
 | Backlog risk | The notebook reports 1.0000 test accuracy and Backlog F1. This result is based on a synthetic target and should not be treated as evidence of real-world prediction accuracy. |
+| Career path | Logistic Regression selected; cross-validation Macro F1: 0.1663; cross-validation accuracy: 0.1650; test accuracy: 0.1300; test balanced accuracy: 0.1507; test Macro F1: 0.1312. The majority-class baseline test accuracy was 0.2250. |
+
+**Career model limitation:** The career-path dataset has limited predictive signal, and some dataset features were synthetically constructed during dataset preparation. Its reported test results are low, including performance below the majority-class accuracy baseline. Treat its output as an experimental academic-project recommendation, not as a reliable or validated career assessment.
 
 Performance categories are derived from next-semester CGPA using these thresholds:
 
@@ -81,6 +120,7 @@ All prediction endpoints accept `POST` requests with a JSON body.
 | `POST` | `/api/v1/predictions/cgpa` | Predict next-semester CGPA |
 | `POST` | `/api/v1/predictions/performance` | Predict the performance category |
 | `POST` | `/api/v1/predictions/backlog-risk` | Predict backlog status |
+| `POST` | `/api/v1/predictions/career-path` | Recommend a broad career domain |
 
 ### Example: CGPA / Performance request
 
@@ -143,13 +183,42 @@ Example response:
 }
 ```
 
+### Example: Career Path request
+
+```json
+{
+  "CGPA (out of 10)": 8.4,
+  "Coding Rating": 8,
+  "Public Speaking Rating": 6,
+  "Interested Subjects": "Programming",
+  "Career Area": "Developer",
+  "Can Work Long": "Yes",
+  "Mathematics (%)": 85,
+  "Project Count": 3,
+  "Project Focus": "Programming; Web Technologies",
+  "Internship": "Yes",
+  "Career Preference": "Job"
+}
+```
+
+Example response:
+
+```json
+{
+  "success": true,
+  "prediction": {
+    "recommended_career_path": "Software & Application Development"
+  }
+}
+```
+
 The values shown in the example responses are illustrative; actual predictions depend on the submitted input and loaded model.
 
 ## Tech Stack
 
 - **Backend:** Python, Flask
 - **Machine Learning:** scikit-learn, pandas, NumPy, joblib
-- **Frontend:** HTML, CSS, JavaScript, Tailwind CSS
+- **Frontend:** HTML, CSS, JavaScript
 - **Deployment:** Vercel
 
 ## Project Structure
@@ -161,19 +230,23 @@ EduPredict/
 │   └── routes.py
 ├── datasets/
 │   ├── backlog_prediction_dataset.csv
-│   └── studentData.csv
+│   ├── studentData.csv
+│   └── career_path_dataset.csv
 ├── models/
 │   ├── backlog_prediction_model.pkl
 │   ├── cgpa_prediction_model.pkl
-│   └── student_performance_model.pkl
+│   ├── student_performance_model.pkl
+│   ├── career_path_prediction_model.pkl
+│   └── career_path_target_encoder.pkl
 ├── python_notebook/
 │   ├── student_prediction_models_with_backlog.ipynb
-│   └── student_prediction_models_with_backlog_0_62044500_1793629483.pdf
+│   └── career_path_prediction_training.ipynb
 ├── services/
 │   ├── __init__.py
 │   ├── backlog.py
 │   ├── cgpa.py
-│   └── performance.py
+│   ├── performance.py
+│   └── career_path.py
 ├── static/
 │   ├── css/
 │   │   ├── documentation.css
@@ -192,7 +265,7 @@ EduPredict/
 └── vercel.json
 ```
 
-Python `__pycache__` folders are generated automatically and are not included in the structure above.
+The file and directory names for the career-path dataset, model artifacts, training notebook, and service above describe the intended project organization; adjust them to match the names actually committed in your working branch. Python `__pycache__` folders are generated automatically and are not included in the structure above.
 
 ## Run Locally
 
@@ -245,12 +318,14 @@ python -m pip install scikit-learn==1.6.1
 
 ## Notebook and Dataset Notes
 
-The `python_notebook/` directory contains the notebook used for preprocessing, comparing algorithms, evaluating the selected models, and saving the model pipelines.
+The `python_notebook/` directory contains the notebooks used for preprocessing, comparing algorithms, evaluating selected models, and saving model pipelines.
 
 The CGPA and performance models use the student academic dataset. The performance target is created from next-semester CGPA using the category thresholds shown above.
 
-The notebook reads data from `datasets/raw/` and `datasets/formatted/` paths in some cells. When rerunning it, place the CSV files in the expected folders or update the paths in the notebook to match the repository's `datasets/` layout.
+The career-path notebook prepares the career dataset, compares candidate classifiers, evaluates the selected model, and saves the artifacts used by the career-path prediction service. Verify the dataset paths and artifact filenames in the notebook and service before retraining or deploying.
+
+The existing CGPA/performance notebook reads data from `datasets/raw/` and `datasets/formatted/` paths in some cells. When rerunning it, place the CSV files in the expected folders or update the paths in the notebook to match the repository's `datasets/` layout.
 
 ## Disclaimer
 
-EduPredict is an academic machine learning project. Its predictions are estimates for demonstration and learning purposes only. They should not be used as the sole basis for academic decisions.
+EduPredict is an academic machine-learning project. Its predictions are estimates for demonstration and learning purposes only. The backlog and career-path models have notable dataset limitations and should not be used as the sole basis for academic or career decisions.
