@@ -1,0 +1,501 @@
+CGPA (out of 10),Coding Rating,Public Speaking Rating,Interested Subjects,Career Area,Can Work Long,Mathematics (%),Project Count,Project Focus,Internship,Career Preference,Recommended Career Domain
+7.84,7,4,IoT,System Developer,Yes,88,0,IoT; Data Science,No,Higher Studies,Business & IT Management
+7.99,6,1,Parallel Computing,Business Process Analyst,Yes,83,2,Parallel Computing; System Designing,No,Higher Studies,Cybersecurity & Networking
+7.40,4,6,Software Engineering,System Developer,Yes,78,1,Software Engineering; Testing,No,Job,Business & IT Management
+7.89,4,1,Programming,Cloud Computing,Yes,81,1,Programming; Web Technologies,No,Higher Studies,Cybersecurity & Networking
+7.93,7,9,Hacking,Developer,No,72,3,Hacking; System Designing,No,Job,Data & Database Systems
+8.20,6,4,Programming,Security,Yes,90,1,Programming; Data Science,No,Higher Studies,Quality Assurance & Testing
+7.39,5,5,Data Engineering,Business Process Analyst,Yes,80,1,Data Engineering; Web Technologies,No,Higher Studies,Cybersecurity & Networking
+8.43,6,9,IoT,Security,Yes,93,2,IoT; Database Security,Yes,Higher Studies,Business & IT Management
+7.68,9,7,Networks,System Developer,No,89,2,Networks; Testing,Yes,Job,UI/UX & Product Design
+7.81,9,4,Software Engineering,Testing,Yes,76,3,Software Engineering; System Designing,No,Higher Studies,Business & IT Management
+7.64,6,6,Cloud Computing,Cloud Computing,No,92,1,Cloud Computing; System Designing,No,Job,Business & IT Management
+7.62,5,3,Networks,Security,Yes,61,5,Networks; System Designing,No,Job,Data & Database Systems
+7.38,4,5,IoT,Security,Yes,91,2,IoT; Testing,Yes,Job,Cloud & IT Infrastructure
+8.04,3,6,IoT,System Developer,No,94,2,IoT; Game Development,No,Job,UI/UX & Product Design
+7.79,8,5,Cloud Computing,Business Process Analyst,No,64,5,Cloud Computing; System Designing,No,Higher Studies,Data & Database Systems
+7.89,4,2,Networks,Business Process Analyst,No,84,5,Networks; Testing,No,Higher Studies,Software & Application Development
+8.34,5,3,Programming,Security,Yes,90,3,Programming; Data Science,Yes,Job,Quality Assurance & Testing
+7.47,2,7,Software Engineering,System Developer,No,70,2,Software Engineering; Cloud Computing,No,Job,Business & IT Management
+7.88,8,7,IoT,System Developer,Yes,84,4,IoT; Web Technologies,No,Job,Software & Application Development
+7.66,5,1,Data Engineering,Developer,Yes,74,1,Data Engineering; Database Security,Yes,Job,Data & Database Systems
+7.08,3,1,Programming,Security,Yes,61,3,Programming; Data Science,Yes,Job,Software & Application Development
+7.36,6,1,Parallel Computing,System Developer,Yes,69,5,Parallel Computing; Hacking,Yes,Higher Studies,Business & IT Management
+7.76,2,6,Cloud Computing,Security,No,61,3,Cloud Computing; Hacking,No,Job,Software & Application Development
+7.77,7,9,Computer Architecture,Developer,Yes,73,2,Computer Architecture; Hacking,Yes,Job,Data & Database Systems
+7.47,5,6,Data Engineering,Security,Yes,64,4,Data Engineering; Game Development,No,Higher Studies,Data & Database Systems
+7.98,9,4,Programming,Security,Yes,92,5,Programming; Web Technologies,Yes,Job,Business & IT Management
+7.77,7,7,Software Engineering,Business Process Analyst,Yes,94,2,Software Engineering; Database Security,No,Higher Studies,Cybersecurity & Networking
+7.98,7,5,Hacking,Developer,No,81,1,Hacking; Cloud Computing,No,Higher Studies,Software & Application Development
+8.37,9,4,Hacking,Developer,No,69,4,Hacking; Web Technologies,Yes,Job,Data & Database Systems
+7.36,1,9,Management,Business Process Analyst,Yes,71,5,Management; Testing,No,Higher Studies,Software & Application Development
+7.03,3,1,Data Engineering,Testing,Yes,63,3,Data Engineering; System Designing,No,Job,UI/UX & Product Design
+7.57,4,2,Hacking,Developer,Yes,91,2,Hacking; Data Science,No,Higher Studies,Data & Database Systems
+7.72,5,7,Parallel Computing,Cloud Computing,Yes,82,4,Parallel Computing; Game Development,Yes,Higher Studies,Software & Application Development
+7.52,9,8,Management,Security,No,69,2,Management; Hacking,No,Job,Software & Application Development
+7.69,6,3,Management,System Developer,No,88,4,Management; Data Science,No,Job,Cloud & IT Infrastructure
+7.19,2,5,Networks,System Developer,Yes,89,1,Networks; Hacking,No,Higher Studies,Cloud & IT Infrastructure
+8.01,5,5,Hacking,Developer,Yes,66,2,Hacking; Testing,No,Job,Data & Database Systems
+7.34,2,1,Cloud Computing,Developer,No,60,2,Cloud Computing; System Designing,No,Higher Studies,Cloud & IT Infrastructure
+7.70,9,1,Computer Architecture,Testing,No,70,2,Computer Architecture; Game Development,No,Job,Data & Database Systems
+8.58,1,1,Data Engineering,Developer,Yes,86,4,Data Engineering; Web Technologies,No,Job,UI/UX & Product Design
+7.40,8,6,Networks,Cloud Computing,Yes,76,2,Networks; Web Technologies,No,Higher Studies,Business & IT Management
+7.80,1,4,IoT,System Developer,Yes,68,1,IoT; Testing,Yes,Job,Software & Application Development
+7.62,3,3,Networks,Security,No,93,2,Networks; Hacking,No,Job,Cybersecurity & Networking
+7.33,4,4,Data Engineering,Cloud Computing,No,74,3,Data Engineering; Testing,Yes,Job,Quality Assurance & Testing
+8.04,3,6,Hacking,Business Process Analyst,No,84,2,Hacking; Data Science,No,Job,Cloud & IT Infrastructure
+6.96,7,2,Management,Security,No,63,2,Management; Web Technologies,No,Job,Software & Application Development
+7.47,3,3,IoT,Business Process Analyst,No,91,3,IoT; System Designing,No,Higher Studies,Cybersecurity & Networking
+7.53,3,1,Data Engineering,Business Process Analyst,No,62,0,Data Engineering; Cloud Computing,No,Higher Studies,Software & Application Development
+7.76,6,7,Software Engineering,Testing,No,75,5,Software Engineering; Data Science,No,Higher Studies,Software & Application Development
+8.11,2,3,Software Engineering,Security,No,90,4,Software Engineering; Database Security,No,Higher Studies,Software & Application Development
+7.79,6,3,Computer Architecture,Security,Yes,65,1,Computer Architecture; Web Technologies,No,Higher Studies,Cybersecurity & Networking
+7.74,8,3,Computer Architecture,System Developer,Yes,65,4,Computer Architecture; Cloud Computing,No,Higher Studies,Software & Application Development
+7.96,5,7,Computer Architecture,Developer,Yes,74,3,Computer Architecture; Testing,No,Job,Business & IT Management
+7.40,4,8,Programming,Security,No,69,1,Programming; Web Technologies,No,Higher Studies,Data & Database Systems
+7.88,8,5,Parallel Computing,Cloud Computing,Yes,80,1,Parallel Computing; Data Science,No,Higher Studies,Software & Application Development
+7.61,7,8,Networks,Security,Yes,82,3,Networks; System Designing,No,Job,Quality Assurance & Testing
+7.90,4,6,Data Engineering,Security,No,67,4,Data Engineering; Data Science,No,Job,Data & Database Systems
+7.84,1,5,Cloud Computing,Business Process Analyst,Yes,70,5,Cloud Computing; Game Development,Yes,Job,Data & Database Systems
+7.57,1,1,Parallel Computing,Developer,Yes,77,1,Parallel Computing; Data Science,No,Job,Business & IT Management
+8.26,1,2,Hacking,Cloud Computing,Yes,86,1,Hacking; Web Technologies,No,Job,Business & IT Management
+7.34,5,9,IoT,Developer,No,66,2,IoT; System Designing,No,Higher Studies,Data & Database Systems
+7.81,8,7,Hacking,Cloud Computing,No,73,0,Hacking; System Designing,No,Higher Studies,UI/UX & Product Design
+7.79,1,7,Cloud Computing,Business Process Analyst,Yes,94,3,Cloud Computing; System Designing,No,Job,Software & Application Development
+7.87,4,5,Parallel Computing,Business Process Analyst,Yes,80,2,Parallel Computing; Game Development,No,Job,Software & Application Development
+7.98,2,1,Networks,Business Process Analyst,No,84,5,Networks; Testing,Yes,Job,Cloud & IT Infrastructure
+7.38,9,8,Management,Testing,No,73,1,Management; Game Development,No,Higher Studies,Cybersecurity & Networking
+8.10,8,6,Computer Architecture,Testing,Yes,77,4,Computer Architecture; Web Technologies,No,Higher Studies,Cybersecurity & Networking
+7.94,9,2,Management,Developer,No,88,4,Management; System Designing,No,Job,Business & IT Management
+7.76,7,6,Cloud Computing,Developer,No,68,4,Cloud Computing; System Designing,Yes,Higher Studies,Cybersecurity & Networking
+7.26,7,3,Hacking,Cloud Computing,Yes,73,1,Hacking; System Designing,No,Job,Cloud & IT Infrastructure
+7.61,7,9,Parallel Computing,Security,No,66,4,Parallel Computing; Cloud Computing,Yes,Job,Business & IT Management
+7.57,7,2,Computer Architecture,Cloud Computing,Yes,81,0,Computer Architecture; Web Technologies,No,Job,Business & IT Management
+7.98,4,5,Data Engineering,Business Process Analyst,Yes,72,4,Data Engineering; Database Security,No,Job,Software & Application Development
+7.73,3,5,Networks,Business Process Analyst,No,89,1,Networks; Cloud Computing,No,Job,Cybersecurity & Networking
+7.19,7,7,Data Engineering,Cloud Computing,Yes,63,4,Data Engineering; Testing,No,Job,Business & IT Management
+7.28,7,7,Software Engineering,Testing,No,82,4,Software Engineering; Game Development,Yes,Higher Studies,Cybersecurity & Networking
+7.80,1,3,Cloud Computing,Developer,Yes,61,4,Cloud Computing; Game Development,No,Higher Studies,UI/UX & Product Design
+7.70,8,1,Parallel Computing,System Developer,No,68,4,Parallel Computing; System Designing,Yes,Job,Cybersecurity & Networking
+7.53,1,8,Hacking,System Developer,Yes,80,1,Hacking; Data Science,No,Job,Software & Application Development
+8.00,7,3,Hacking,Cloud Computing,No,62,1,Hacking; Game Development,Yes,Job,Software & Application Development
+8.06,5,1,Hacking,Security,No,63,5,Hacking; Game Development,No,Job,Data & Database Systems
+7.72,6,1,Data Engineering,Business Process Analyst,No,72,2,Data Engineering; Testing,No,Job,Business & IT Management
+7.78,8,8,Programming,Business Process Analyst,Yes,70,4,Programming; Web Technologies,No,Higher Studies,Data & Database Systems
+7.38,9,8,Cloud Computing,System Developer,No,94,2,Cloud Computing; Hacking,No,Higher Studies,Software & Application Development
+7.73,5,3,Parallel Computing,Cloud Computing,No,73,5,Parallel Computing; Data Science,Yes,Job,Business & IT Management
+8.28,3,5,Cloud Computing,System Developer,Yes,79,5,Cloud Computing; Testing,No,Higher Studies,Data & Database Systems
+7.91,3,3,Programming,Developer,Yes,71,5,Programming; Data Science,Yes,Higher Studies,Software & Application Development
+7.84,5,6,Networks,Cloud Computing,Yes,76,1,Networks; Data Science,No,Job,Cloud & IT Infrastructure
+8.10,4,9,Data Engineering,Security,No,84,3,Data Engineering; Database Security,No,Higher Studies,UI/UX & Product Design
+6.93,4,5,IoT,Cloud Computing,Yes,61,5,IoT; Testing,Yes,Job,Software & Application Development
+7.52,5,1,Hacking,Developer,Yes,92,4,Hacking; Testing,No,Job,Data & Database Systems
+7.84,1,6,Cloud Computing,Developer,Yes,84,4,Cloud Computing; Hacking,Yes,Higher Studies,Software & Application Development
+8.10,7,1,Cloud Computing,System Developer,Yes,87,1,Cloud Computing; Data Science,Yes,Job,Cybersecurity & Networking
+7.77,8,7,Parallel Computing,Business Process Analyst,No,94,3,Parallel Computing; Data Science,No,Job,Business & IT Management
+8.18,3,6,IoT,Cloud Computing,No,83,2,IoT; Hacking,No,Job,Quality Assurance & Testing
+7.73,6,9,Networks,Cloud Computing,No,76,5,Networks; Web Technologies,No,Higher Studies,Cloud & IT Infrastructure
+8.29,6,5,Cloud Computing,Testing,No,86,2,Cloud Computing; Cloud Computing,No,Job,Data & Database Systems
+6.91,7,2,Management,Cloud Computing,No,74,3,Management; Web Technologies,Yes,Job,Software & Application Development
+8.06,5,9,Cloud Computing,System Developer,No,90,2,Cloud Computing; System Designing,Yes,Higher Studies,Cybersecurity & Networking
+7.36,4,2,Software Engineering,Business Process Analyst,No,86,2,Software Engineering; Hacking,Yes,Job,Cloud & IT Infrastructure
+7.62,7,2,IoT,System Developer,Yes,82,1,IoT; System Designing,Yes,Higher Studies,Data & Database Systems
+8.16,3,3,Data Engineering,Developer,No,86,4,Data Engineering; Testing,Yes,Job,Data & Database Systems
+7.84,9,3,IoT,Cloud Computing,Yes,77,3,IoT; Web Technologies,No,Job,Software & Application Development
+7.63,1,7,Software Engineering,Business Process Analyst,No,80,4,Software Engineering; Testing,Yes,Job,Software & Application Development
+7.58,8,6,Software Engineering,Developer,No,68,2,Software Engineering; Cloud Computing,No,Job,UI/UX & Product Design
+7.67,9,8,Data Engineering,Cloud Computing,Yes,71,3,Data Engineering; Web Technologies,No,Job,Cybersecurity & Networking
+7.92,6,2,Computer Architecture,Business Process Analyst,No,83,3,Computer Architecture; Data Science,No,Higher Studies,Cybersecurity & Networking
+7.31,6,2,Data Engineering,Business Process Analyst,Yes,71,3,Data Engineering; Database Security,Yes,Job,Quality Assurance & Testing
+7.70,8,5,Networks,Developer,Yes,62,4,Networks; Web Technologies,No,Higher Studies,Software & Application Development
+7.90,1,3,Hacking,System Developer,Yes,73,3,Hacking; Game Development,Yes,Higher Studies,Software & Application Development
+7.57,8,3,Computer Architecture,Business Process Analyst,Yes,82,5,Computer Architecture; Hacking,No,Job,Software & Application Development
+7.60,9,5,Hacking,Developer,No,64,0,Hacking; System Designing,No,Higher Studies,Cloud & IT Infrastructure
+7.77,6,1,Cloud Computing,Testing,No,87,1,Cloud Computing; Database Security,Yes,Higher Studies,Data & Database Systems
+7.91,8,6,Networks,System Developer,Yes,80,1,Networks; Cloud Computing,Yes,Higher Studies,UI/UX & Product Design
+8.14,5,5,Software Engineering,Cloud Computing,No,72,0,Software Engineering; System Designing,No,Job,Data & Database Systems
+7.80,8,5,Cloud Computing,Security,No,70,5,Cloud Computing; Testing,Yes,Higher Studies,Quality Assurance & Testing
+8.08,8,9,Parallel Computing,Developer,Yes,93,4,Parallel Computing; Game Development,Yes,Job,Cloud & IT Infrastructure
+7.67,4,5,Computer Architecture,Security,No,81,4,Computer Architecture; Game Development,No,Higher Studies,Data & Database Systems
+8.10,3,4,Cloud Computing,Developer,Yes,93,3,Cloud Computing; System Designing,Yes,Job,Cloud & IT Infrastructure
+7.66,1,3,Software Engineering,Developer,Yes,60,3,Software Engineering; Database Security,Yes,Higher Studies,Cybersecurity & Networking
+8.03,3,2,IoT,Developer,Yes,75,2,IoT; System Designing,No,Higher Studies,Cybersecurity & Networking
+8.12,7,6,Parallel Computing,Business Process Analyst,No,69,2,Parallel Computing; System Designing,Yes,Job,Data & Database Systems
+7.48,9,3,Networks,Cloud Computing,Yes,69,3,Networks; Cloud Computing,Yes,Job,Cybersecurity & Networking
+7.28,8,1,Data Engineering,Cloud Computing,Yes,62,1,Data Engineering; System Designing,No,Higher Studies,Cloud & IT Infrastructure
+7.51,3,9,Hacking,Business Process Analyst,No,60,5,Hacking; Cloud Computing,No,Job,Cybersecurity & Networking
+7.67,2,8,Data Engineering,System Developer,Yes,75,1,Data Engineering; Game Development,No,Higher Studies,Business & IT Management
+8.01,5,4,IoT,System Developer,Yes,93,1,IoT; System Designing,Yes,Higher Studies,Software & Application Development
+7.48,8,7,Data Engineering,Testing,Yes,88,2,Data Engineering; Hacking,No,Higher Studies,Data & Database Systems
+7.76,2,9,IoT,Business Process Analyst,No,90,4,IoT; Hacking,No,Job,Cloud & IT Infrastructure
+8.07,2,1,Parallel Computing,Security,Yes,71,2,Parallel Computing; Testing,No,Higher Studies,Data & Database Systems
+7.47,9,4,Software Engineering,System Developer,Yes,66,3,Software Engineering; Database Security,No,Higher Studies,Software & Application Development
+8.23,8,3,Networks,Security,Yes,85,2,Networks; Game Development,No,Job,Business & IT Management
+7.84,4,4,Parallel Computing,Business Process Analyst,Yes,81,3,Parallel Computing; Data Science,No,Job,Software & Application Development
+8.08,8,1,Programming,Developer,No,77,5,Programming; Web Technologies,No,Higher Studies,Business & IT Management
+7.28,5,8,Software Engineering,Developer,No,78,3,Software Engineering; Database Security,No,Higher Studies,Cybersecurity & Networking
+8.18,5,6,Cloud Computing,Testing,No,82,1,Cloud Computing; Hacking,No,Higher Studies,Cybersecurity & Networking
+8.11,2,1,Networks,System Developer,No,90,5,Networks; Game Development,Yes,Job,Data & Database Systems
+7.60,4,1,Parallel Computing,System Developer,Yes,90,2,Parallel Computing; Game Development,No,Job,Business & IT Management
+7.68,4,7,IoT,System Developer,Yes,84,2,IoT; Web Technologies,No,Higher Studies,Cybersecurity & Networking
+7.89,3,9,Software Engineering,Cloud Computing,No,93,5,Software Engineering; Data Science,Yes,Job,Data & Database Systems
+8.00,9,4,Software Engineering,Security,Yes,91,4,Software Engineering; Game Development,No,Job,Software & Application Development
+8.19,2,3,Management,Testing,Yes,76,3,Management; Hacking,No,Higher Studies,UI/UX & Product Design
+7.38,5,7,IoT,Testing,Yes,67,3,IoT; Web Technologies,No,Higher Studies,Data & Database Systems
+7.78,1,8,Cloud Computing,Business Process Analyst,No,87,4,Cloud Computing; Game Development,Yes,Higher Studies,Cybersecurity & Networking
+7.04,3,3,Networks,Security,No,73,3,Networks; Game Development,Yes,Higher Studies,Software & Application Development
+7.28,4,9,Software Engineering,Developer,Yes,70,5,Software Engineering; Database Security,No,Higher Studies,Quality Assurance & Testing
+7.94,3,5,Parallel Computing,System Developer,Yes,83,2,Parallel Computing; Testing,No,Job,Cloud & IT Infrastructure
+7.67,9,4,IoT,System Developer,Yes,85,5,IoT; Database Security,Yes,Job,Software & Application Development
+7.32,9,2,Programming,Business Process Analyst,Yes,82,2,Programming; Data Science,Yes,Job,Cybersecurity & Networking
+7.54,8,9,Programming,Testing,Yes,68,6,Programming; System Designing,No,Job,Cloud & IT Infrastructure
+7.67,4,2,Management,System Developer,Yes,87,5,Management; Database Security,No,Job,Cybersecurity & Networking
+8.27,4,8,Data Engineering,Testing,No,94,2,Data Engineering; System Designing,Yes,Job,Data & Database Systems
+7.87,9,3,Parallel Computing,Business Process Analyst,Yes,60,2,Parallel Computing; Database Security,No,Higher Studies,Business & IT Management
+7.90,2,7,IoT,Developer,No,86,5,IoT; Cloud Computing,No,Higher Studies,Business & IT Management
+8.03,4,8,Data Engineering,System Developer,No,69,3,Data Engineering; Web Technologies,Yes,Job,Cloud & IT Infrastructure
+7.38,3,4,Hacking,Business Process Analyst,Yes,84,4,Hacking; Testing,No,Higher Studies,Data & Database Systems
+7.83,3,7,Programming,Developer,Yes,92,4,Programming; Web Technologies,No,Higher Studies,Cloud & IT Infrastructure
+7.77,9,9,Software Engineering,Business Process Analyst,No,71,2,Software Engineering; Cloud Computing,No,Higher Studies,Cloud & IT Infrastructure
+7.64,8,9,Cloud Computing,Developer,No,61,4,Cloud Computing; Game Development,Yes,Job,Cloud & IT Infrastructure
+7.71,1,7,Networks,Security,No,80,3,Networks; Database Security,No,Job,Data & Database Systems
+7.17,1,7,Networks,Security,Yes,62,3,Networks; Game Development,No,Higher Studies,Data & Database Systems
+7.69,3,4,Computer Architecture,Testing,Yes,78,2,Computer Architecture; Database Security,Yes,Higher Studies,UI/UX & Product Design
+8.33,8,5,Programming,System Developer,Yes,90,1,Programming; Testing,Yes,Higher Studies,Business & IT Management
+8.38,9,8,Networks,System Developer,No,93,4,Networks; System Designing,No,Higher Studies,Quality Assurance & Testing
+7.51,2,8,Cloud Computing,Cloud Computing,No,89,2,Cloud Computing; Web Technologies,No,Job,Business & IT Management
+7.11,4,7,Cloud Computing,Security,No,61,2,Cloud Computing; System Designing,Yes,Higher Studies,Cloud & IT Infrastructure
+7.32,5,9,Data Engineering,Security,No,82,3,Data Engineering; Data Science,Yes,Higher Studies,UI/UX & Product Design
+7.59,9,6,Data Engineering,Cloud Computing,Yes,68,1,Data Engineering; Cloud Computing,No,Higher Studies,Software & Application Development
+8.01,7,3,Programming,Cloud Computing,Yes,65,0,Programming; System Designing,No,Job,Cybersecurity & Networking
+8.27,8,5,Programming,System Developer,Yes,83,2,Programming; Cloud Computing,No,Job,Software & Application Development
+7.46,7,1,Management,Security,No,71,2,Management; System Designing,No,Higher Studies,UI/UX & Product Design
+7.66,8,4,Management,Developer,Yes,72,3,Management; Cloud Computing,No,Higher Studies,Software & Application Development
+8.03,2,4,Parallel Computing,Business Process Analyst,Yes,77,2,Parallel Computing; Testing,No,Job,Business & IT Management
+8.10,1,2,Networks,Developer,Yes,84,2,Networks; Game Development,No,Job,Software & Application Development
+7.48,3,1,Networks,Business Process Analyst,Yes,65,1,Networks; Database Security,No,Higher Studies,Cloud & IT Infrastructure
+8.06,7,6,Cloud Computing,System Developer,Yes,75,3,Cloud Computing; Cloud Computing,No,Job,Cybersecurity & Networking
+8.03,8,8,Parallel Computing,Cloud Computing,No,60,5,Parallel Computing; Database Security,No,Job,Data & Database Systems
+7.51,4,5,Software Engineering,Business Process Analyst,No,82,2,Software Engineering; Data Science,No,Job,Data & Database Systems
+7.99,7,3,Programming,System Developer,No,78,3,Programming; Data Science,Yes,Job,Software & Application Development
+7.31,9,4,Networks,Testing,Yes,65,3,Networks; Cloud Computing,No,Higher Studies,Software & Application Development
+7.31,3,5,Data Engineering,Business Process Analyst,No,74,4,Data Engineering; Database Security,No,Job,Quality Assurance & Testing
+7.58,6,1,Hacking,Developer,Yes,83,2,Hacking; Hacking,Yes,Job,Cybersecurity & Networking
+7.44,4,7,Parallel Computing,Cloud Computing,No,76,2,Parallel Computing; Database Security,No,Higher Studies,Software & Application Development
+7.78,8,1,Programming,System Developer,Yes,87,3,Programming; Data Science,Yes,Job,Software & Application Development
+7.76,8,5,Networks,Testing,No,75,1,Networks; System Designing,No,Higher Studies,Cloud & IT Infrastructure
+7.86,3,7,Management,Cloud Computing,Yes,61,2,Management; Hacking,No,Job,Cloud & IT Infrastructure
+7.84,6,4,Parallel Computing,Cloud Computing,No,70,1,Parallel Computing; Web Technologies,No,Higher Studies,Cybersecurity & Networking
+7.46,8,1,Software Engineering,Cloud Computing,No,84,1,Software Engineering; Data Science,Yes,Job,Business & IT Management
+8.19,6,8,Data Engineering,Cloud Computing,No,87,0,Data Engineering; Hacking,No,Job,Cloud & IT Infrastructure
+7.76,6,6,IoT,Business Process Analyst,No,94,3,IoT; Database Security,No,Job,UI/UX & Product Design
+7.60,1,2,Cloud Computing,Security,Yes,76,1,Cloud Computing; Web Technologies,No,Higher Studies,Cybersecurity & Networking
+7.96,8,6,Networks,Testing,Yes,87,3,Networks; Data Science,No,Job,Business & IT Management
+7.56,7,8,Hacking,Testing,Yes,76,3,Hacking; Data Science,No,Job,Cybersecurity & Networking
+7.51,2,1,Programming,Security,Yes,68,4,Programming; Web Technologies,No,Higher Studies,Cybersecurity & Networking
+7.31,7,5,Computer Architecture,Testing,Yes,68,1,Computer Architecture; Data Science,No,Higher Studies,Cybersecurity & Networking
+8.39,4,4,Parallel Computing,Testing,No,82,4,Parallel Computing; Database Security,No,Job,Software & Application Development
+7.70,9,6,Computer Architecture,Testing,Yes,70,3,Computer Architecture; Testing,Yes,Higher Studies,Cloud & IT Infrastructure
+7.52,8,8,Programming,System Developer,Yes,73,5,Programming; Database Security,Yes,Job,Cloud & IT Infrastructure
+7.47,9,4,Software Engineering,System Developer,Yes,65,5,Software Engineering; Data Science,Yes,Higher Studies,Software & Application Development
+7.80,1,8,IoT,Cloud Computing,Yes,82,2,IoT; Database Security,No,Higher Studies,Cybersecurity & Networking
+7.83,5,7,Data Engineering,Testing,No,62,2,Data Engineering; Cloud Computing,Yes,Higher Studies,Software & Application Development
+7.94,3,6,Hacking,Business Process Analyst,No,91,5,Hacking; Web Technologies,Yes,Job,Cloud & IT Infrastructure
+7.47,1,6,Parallel Computing,System Developer,No,90,1,Parallel Computing; Hacking,No,Higher Studies,Data & Database Systems
+7.98,1,3,Data Engineering,Cloud Computing,No,84,1,Data Engineering; System Designing,No,Job,Cybersecurity & Networking
+7.67,5,4,Hacking,Testing,No,73,4,Hacking; Game Development,No,Job,Business & IT Management
+8.16,3,1,Software Engineering,Security,No,72,3,Software Engineering; Database Security,No,Higher Studies,Data & Database Systems
+8.37,6,4,Networks,Cloud Computing,No,92,1,Networks; Web Technologies,No,Higher Studies,Software & Application Development
+7.39,8,4,Data Engineering,Cloud Computing,No,79,4,Data Engineering; Data Science,No,Higher Studies,Cybersecurity & Networking
+8.06,3,1,Management,Cloud Computing,Yes,85,0,Management; Database Security,No,Higher Studies,Software & Application Development
+7.74,7,5,Management,Cloud Computing,No,82,2,Management; Game Development,No,Job,Cybersecurity & Networking
+7.17,2,3,Software Engineering,Testing,No,70,5,Software Engineering; Game Development,Yes,Job,Data & Database Systems
+7.66,7,3,Hacking,Business Process Analyst,Yes,91,1,Hacking; Cloud Computing,No,Job,Cybersecurity & Networking
+7.70,8,6,Parallel Computing,Cloud Computing,Yes,64,2,Parallel Computing; Web Technologies,No,Job,Cloud & IT Infrastructure
+7.82,5,3,Computer Architecture,Cloud Computing,Yes,67,2,Computer Architecture; Cloud Computing,No,Higher Studies,Software & Application Development
+7.94,7,9,Hacking,Cloud Computing,No,92,2,Hacking; Hacking,No,Job,Cloud & IT Infrastructure
+7.49,5,4,Hacking,Developer,Yes,69,4,Hacking; Database Security,No,Job,Software & Application Development
+7.72,1,3,Data Engineering,Security,Yes,86,1,Data Engineering; Database Security,No,Higher Studies,Data & Database Systems
+7.53,3,9,Hacking,Developer,Yes,90,4,Hacking; Web Technologies,No,Job,Cybersecurity & Networking
+8.03,6,7,Data Engineering,Security,Yes,84,4,Data Engineering; System Designing,No,Job,Software & Application Development
+8.08,6,7,Hacking,Cloud Computing,Yes,86,4,Hacking; Testing,No,Higher Studies,Cloud & IT Infrastructure
+7.26,8,6,Data Engineering,System Developer,Yes,81,3,Data Engineering; Data Science,No,Higher Studies,Software & Application Development
+6.66,4,3,Cloud Computing,Testing,Yes,66,3,Cloud Computing; Cloud Computing,No,Job,Software & Application Development
+8.30,8,1,Computer Architecture,Developer,Yes,87,5,Computer Architecture; Database Security,No,Job,UI/UX & Product Design
+7.12,6,3,Computer Architecture,Business Process Analyst,No,65,1,Computer Architecture; Data Science,No,Job,Cybersecurity & Networking
+7.67,8,9,Computer Architecture,Security,No,78,2,Computer Architecture; Cloud Computing,No,Higher Studies,Quality Assurance & Testing
+7.98,7,7,Programming,Testing,No,78,2,Programming; System Designing,No,Higher Studies,Business & IT Management
+8.09,7,9,Hacking,Security,Yes,79,2,Hacking; Game Development,Yes,Higher Studies,Cybersecurity & Networking
+7.44,2,3,Hacking,Business Process Analyst,No,69,4,Hacking; Cloud Computing,Yes,Job,Software & Application Development
+7.76,6,1,Software Engineering,Testing,No,69,4,Software Engineering; System Designing,No,Higher Studies,Software & Application Development
+7.72,6,9,Management,Security,No,92,1,Management; Cloud Computing,No,Job,Software & Application Development
+7.47,5,8,Hacking,System Developer,No,73,4,Hacking; System Designing,Yes,Higher Studies,Cybersecurity & Networking
+7.93,5,1,Networks,System Developer,Yes,74,0,Networks; Web Technologies,No,Higher Studies,Cybersecurity & Networking
+8.16,2,6,Software Engineering,Developer,No,82,1,Software Engineering; Testing,No,Higher Studies,Business & IT Management
+7.44,9,8,Hacking,Testing,No,61,5,Hacking; Hacking,No,Higher Studies,Quality Assurance & Testing
+7.34,6,4,Computer Architecture,Testing,Yes,75,2,Computer Architecture; Web Technologies,Yes,Higher Studies,Business & IT Management
+7.79,1,6,Programming,Cloud Computing,No,84,1,Programming; Hacking,No,Job,Software & Application Development
+8.02,3,5,Parallel Computing,Cloud Computing,Yes,81,0,Parallel Computing; Game Development,No,Job,Software & Application Development
+7.60,6,1,Data Engineering,Developer,Yes,65,0,Data Engineering; Data Science,No,Job,Software & Application Development
+7.69,3,2,Cloud Computing,Business Process Analyst,Yes,62,2,Cloud Computing; Hacking,No,Job,Quality Assurance & Testing
+7.91,8,5,Parallel Computing,System Developer,No,66,5,Parallel Computing; Data Science,No,Higher Studies,Data & Database Systems
+7.20,2,8,Computer Architecture,Cloud Computing,No,63,5,Computer Architecture; Database Security,No,Job,Software & Application Development
+7.86,3,6,Management,Developer,No,60,1,Management; Database Security,No,Higher Studies,Software & Application Development
+7.82,8,1,Networks,Business Process Analyst,No,72,4,Networks; Database Security,Yes,Job,Software & Application Development
+7.93,6,4,Data Engineering,Cloud Computing,Yes,83,1,Data Engineering; Game Development,No,Job,Data & Database Systems
+7.30,1,1,Networks,Testing,No,67,2,Networks; Data Science,No,Higher Studies,Software & Application Development
+7.58,8,2,Data Engineering,Business Process Analyst,No,70,3,Data Engineering; Web Technologies,No,Higher Studies,Business & IT Management
+7.87,4,7,Networks,Security,Yes,94,4,Networks; System Designing,Yes,Job,Software & Application Development
+7.64,5,9,Hacking,Testing,No,91,1,Hacking; Testing,No,Job,Cybersecurity & Networking
+7.31,1,1,IoT,Cloud Computing,Yes,80,1,IoT; Game Development,No,Job,Software & Application Development
+7.57,2,1,Hacking,Cloud Computing,Yes,68,2,Hacking; Game Development,No,Job,Software & Application Development
+8.36,6,6,Software Engineering,Security,Yes,90,4,Software Engineering; System Designing,No,Job,Cybersecurity & Networking
+7.99,8,4,Data Engineering,Testing,Yes,83,2,Data Engineering; Cloud Computing,No,Higher Studies,Cybersecurity & Networking
+7.21,9,7,Cloud Computing,Security,No,75,4,Cloud Computing; Testing,No,Higher Studies,Cybersecurity & Networking
+7.86,3,6,Programming,System Developer,No,73,1,Programming; Game Development,Yes,Job,Business & IT Management
+7.29,4,1,Computer Architecture,Developer,Yes,70,5,Computer Architecture; Testing,No,Job,Software & Application Development
+7.69,7,9,Networks,Cloud Computing,Yes,92,0,Networks; Game Development,No,Higher Studies,Business & IT Management
+7.20,8,9,Parallel Computing,Developer,No,61,4,Parallel Computing; Web Technologies,Yes,Higher Studies,Cloud & IT Infrastructure
+7.36,5,9,Management,Security,No,67,1,Management; Data Science,No,Job,Business & IT Management
+7.76,5,3,IoT,Business Process Analyst,No,66,3,IoT; Hacking,Yes,Job,Cybersecurity & Networking
+7.66,2,2,Networks,Testing,Yes,73,5,Networks; Hacking,Yes,Job,Cloud & IT Infrastructure
+7.44,1,7,Networks,System Developer,Yes,92,1,Networks; Cloud Computing,No,Job,UI/UX & Product Design
+7.52,5,7,Hacking,Security,Yes,67,1,Hacking; System Designing,Yes,Job,Cloud & IT Infrastructure
+7.18,8,7,Hacking,System Developer,Yes,61,3,Hacking; Web Technologies,No,Job,UI/UX & Product Design
+7.91,1,3,Parallel Computing,Cloud Computing,Yes,78,6,Parallel Computing; Game Development,Yes,Higher Studies,Software & Application Development
+8.11,2,7,Parallel Computing,System Developer,Yes,90,3,Parallel Computing; Game Development,No,Job,Software & Application Development
+7.88,8,2,Networks,System Developer,No,60,4,Networks; Database Security,No,Higher Studies,Cybersecurity & Networking
+7.66,4,4,Data Engineering,System Developer,Yes,72,5,Data Engineering; Database Security,Yes,Higher Studies,Cloud & IT Infrastructure
+7.98,6,2,Management,Developer,Yes,84,3,Management; Database Security,Yes,Job,Cloud & IT Infrastructure
+8.31,5,4,Networks,Testing,Yes,77,2,Networks; Game Development,No,Higher Studies,Cybersecurity & Networking
+7.91,4,6,Programming,System Developer,No,71,5,Programming; Testing,No,Higher Studies,Data & Database Systems
+8.14,4,4,Cloud Computing,Cloud Computing,Yes,72,4,Cloud Computing; Web Technologies,Yes,Job,Cloud & IT Infrastructure
+8.03,6,5,Programming,System Developer,Yes,78,4,Programming; Testing,No,Job,Data & Database Systems
+7.33,2,3,Parallel Computing,Security,No,85,4,Parallel Computing; Game Development,Yes,Higher Studies,UI/UX & Product Design
+7.81,8,4,Software Engineering,Developer,No,79,5,Software Engineering; Database Security,No,Job,Quality Assurance & Testing
+7.58,6,7,Cloud Computing,Business Process Analyst,Yes,75,0,Cloud Computing; Database Security,No,Job,Software & Application Development
+7.71,3,1,Cloud Computing,Developer,No,81,5,Cloud Computing; System Designing,No,Higher Studies,Business & IT Management
+8.29,6,2,Parallel Computing,System Developer,No,91,1,Parallel Computing; Hacking,No,Higher Studies,Cloud & IT Infrastructure
+7.61,7,1,Networks,Business Process Analyst,Yes,90,2,Networks; Cloud Computing,No,Job,Cloud & IT Infrastructure
+7.17,6,7,Software Engineering,Developer,No,79,3,Software Engineering; Web Technologies,No,Higher Studies,Cloud & IT Infrastructure
+7.46,5,5,Parallel Computing,Developer,No,67,4,Parallel Computing; Game Development,No,Job,Cloud & IT Infrastructure
+8.40,4,6,Data Engineering,Developer,Yes,81,1,Data Engineering; System Designing,No,Job,Cybersecurity & Networking
+7.72,3,3,Cloud Computing,Testing,No,89,3,Cloud Computing; Database Security,No,Job,Cybersecurity & Networking
+8.00,3,8,Parallel Computing,System Developer,Yes,92,1,Parallel Computing; Testing,No,Higher Studies,Cybersecurity & Networking
+7.50,8,6,Data Engineering,Security,Yes,65,4,Data Engineering; System Designing,No,Job,Software & Application Development
+7.89,8,5,Hacking,Cloud Computing,No,89,3,Hacking; Hacking,Yes,Job,Software & Application Development
+7.81,1,1,Networks,Cloud Computing,No,94,1,Networks; System Designing,No,Job,Cloud & IT Infrastructure
+7.94,1,1,IoT,Cloud Computing,No,90,3,IoT; Database Security,No,Job,UI/UX & Product Design
+7.62,3,1,Programming,Business Process Analyst,No,68,4,Programming; Game Development,Yes,Job,Data & Database Systems
+7.81,2,8,Hacking,System Developer,Yes,71,2,Hacking; Data Science,No,Job,Data & Database Systems
+7.64,3,6,IoT,Developer,Yes,73,1,IoT; Hacking,No,Higher Studies,Cybersecurity & Networking
+7.92,8,3,Computer Architecture,Cloud Computing,Yes,84,1,Computer Architecture; Cloud Computing,No,Job,Business & IT Management
+7.56,7,8,Parallel Computing,Cloud Computing,No,63,2,Parallel Computing; Cloud Computing,No,Higher Studies,Business & IT Management
+8.29,4,5,Computer Architecture,Security,Yes,79,5,Computer Architecture; Game Development,No,Higher Studies,Software & Application Development
+8.08,8,7,Computer Architecture,System Developer,No,84,3,Computer Architecture; System Designing,Yes,Job,Software & Application Development
+7.34,5,5,Computer Architecture,System Developer,Yes,66,1,Computer Architecture; Hacking,Yes,Job,Cybersecurity & Networking
+8.23,6,7,Management,System Developer,No,83,1,Management; Database Security,No,Job,Quality Assurance & Testing
+7.87,8,7,Cloud Computing,Developer,Yes,79,2,Cloud Computing; Testing,Yes,Higher Studies,Software & Application Development
+7.20,5,5,Networks,Business Process Analyst,Yes,65,2,Networks; Database Security,Yes,Job,Cybersecurity & Networking
+8.10,2,6,Computer Architecture,Security,No,91,5,Computer Architecture; Testing,No,Higher Studies,Quality Assurance & Testing
+7.83,9,7,IoT,Developer,No,89,2,IoT; System Designing,Yes,Higher Studies,UI/UX & Product Design
+7.42,8,8,Software Engineering,Developer,No,82,3,Software Engineering; Hacking,Yes,Higher Studies,Quality Assurance & Testing
+7.41,6,2,Software Engineering,Business Process Analyst,No,71,4,Software Engineering; Game Development,Yes,Job,Cybersecurity & Networking
+8.00,5,6,Hacking,Business Process Analyst,No,87,4,Hacking; Data Science,Yes,Higher Studies,Data & Database Systems
+7.96,9,8,Hacking,Testing,No,75,6,Hacking; Game Development,No,Higher Studies,UI/UX & Product Design
+7.68,8,3,Programming,Testing,Yes,90,4,Programming; Cloud Computing,No,Job,Software & Application Development
+8.01,9,8,Data Engineering,Security,Yes,75,1,Data Engineering; Cloud Computing,No,Job,Cloud & IT Infrastructure
+7.86,7,8,Parallel Computing,Cloud Computing,No,66,0,Parallel Computing; Data Science,No,Job,Cybersecurity & Networking
+8.59,2,6,IoT,Business Process Analyst,No,73,2,IoT; Testing,No,Job,UI/UX & Product Design
+7.82,6,3,Cloud Computing,Developer,No,67,2,Cloud Computing; Web Technologies,No,Higher Studies,Data & Database Systems
+8.32,1,9,Cloud Computing,Cloud Computing,Yes,91,1,Cloud Computing; Web Technologies,No,Higher Studies,Data & Database Systems
+7.40,7,9,Software Engineering,Business Process Analyst,Yes,74,4,Software Engineering; System Designing,No,Job,Software & Application Development
+7.97,7,3,Software Engineering,Security,No,68,1,Software Engineering; Game Development,No,Higher Studies,Data & Database Systems
+7.68,1,3,Computer Architecture,Developer,Yes,74,3,Computer Architecture; Testing,No,Job,UI/UX & Product Design
+7.94,7,9,Programming,Developer,Yes,71,2,Programming; Data Science,Yes,Job,UI/UX & Product Design
+7.38,8,5,Programming,Security,No,78,4,Programming; Database Security,Yes,Job,Data & Database Systems
+8.29,5,7,Networks,Developer,Yes,70,2,Networks; Database Security,No,Higher Studies,Cybersecurity & Networking
+7.82,4,6,Management,Developer,Yes,79,1,Management; Web Technologies,Yes,Job,Cloud & IT Infrastructure
+7.97,7,2,Cloud Computing,Business Process Analyst,Yes,83,4,Cloud Computing; Web Technologies,Yes,Higher Studies,Quality Assurance & Testing
+7.76,3,6,Programming,Security,No,60,2,Programming; Hacking,No,Higher Studies,Data & Database Systems
+7.84,6,2,Software Engineering,Business Process Analyst,No,91,1,Software Engineering; Cloud Computing,No,Job,Cybersecurity & Networking
+8.33,4,5,Management,Business Process Analyst,Yes,62,2,Management; Game Development,No,Job,Quality Assurance & Testing
+8.64,9,9,Software Engineering,Developer,No,90,3,Software Engineering; Testing,Yes,Job,Quality Assurance & Testing
+7.93,5,1,Data Engineering,Business Process Analyst,No,64,5,Data Engineering; System Designing,No,Job,Business & IT Management
+7.99,5,6,Networks,Security,Yes,90,1,Networks; Game Development,No,Higher Studies,Cybersecurity & Networking
+7.20,9,2,IoT,Security,Yes,75,4,IoT; Cloud Computing,Yes,Job,Quality Assurance & Testing
+8.39,6,5,Cloud Computing,Developer,Yes,80,3,Cloud Computing; System Designing,No,Higher Studies,Cloud & IT Infrastructure
+7.61,6,7,Data Engineering,System Developer,Yes,62,4,Data Engineering; Cloud Computing,No,Job,Cloud & IT Infrastructure
+7.43,8,9,Cloud Computing,System Developer,No,94,3,Cloud Computing; Data Science,No,Job,Data & Database Systems
+7.89,4,8,Programming,Developer,No,68,4,Programming; Web Technologies,No,Higher Studies,Data & Database Systems
+6.97,4,5,Computer Architecture,Testing,No,62,1,Computer Architecture; Testing,No,Higher Studies,Business & IT Management
+8.06,4,8,Data Engineering,Testing,Yes,90,2,Data Engineering; Database Security,Yes,Job,Cybersecurity & Networking
+7.52,2,8,Cloud Computing,Security,No,79,1,Cloud Computing; Database Security,Yes,Job,Business & IT Management
+7.42,3,6,Networks,Testing,Yes,65,3,Networks; Hacking,No,Higher Studies,Business & IT Management
+7.06,5,7,Hacking,Developer,No,75,0,Hacking; Web Technologies,No,Higher Studies,Data & Database Systems
+8.23,9,6,Programming,Cloud Computing,Yes,76,4,Programming; Database Security,Yes,Job,Data & Database Systems
+7.59,3,2,Computer Architecture,Business Process Analyst,No,81,4,Computer Architecture; Testing,No,Higher Studies,Business & IT Management
+7.50,4,2,Computer Architecture,Business Process Analyst,Yes,69,2,Computer Architecture; Data Science,No,Job,Business & IT Management
+7.44,9,6,Hacking,Security,No,67,1,Hacking; Web Technologies,No,Higher Studies,Quality Assurance & Testing
+7.07,2,2,IoT,Cloud Computing,No,60,2,IoT; Hacking,No,Higher Studies,Data & Database Systems
+8.16,7,1,Hacking,Business Process Analyst,Yes,69,3,Hacking; System Designing,No,Job,Data & Database Systems
+8.28,3,9,Programming,Security,Yes,80,5,Programming; System Designing,No,Higher Studies,Cybersecurity & Networking
+7.80,6,2,Cloud Computing,Business Process Analyst,Yes,86,1,Cloud Computing; Cloud Computing,No,Higher Studies,Business & IT Management
+8.53,9,8,Programming,System Developer,Yes,92,1,Programming; Game Development,Yes,Job,Cloud & IT Infrastructure
+7.96,4,6,Data Engineering,Testing,Yes,60,2,Data Engineering; Testing,Yes,Higher Studies,Software & Application Development
+7.63,7,4,Networks,System Developer,Yes,65,5,Networks; System Designing,No,Higher Studies,Cybersecurity & Networking
+7.48,7,8,Management,Cloud Computing,No,61,1,Management; Testing,No,Job,Business & IT Management
+7.69,2,8,Programming,Security,No,82,3,Programming; System Designing,No,Job,Software & Application Development
+7.80,3,8,IoT,Developer,No,71,1,IoT; Game Development,No,Higher Studies,Data & Database Systems
+8.34,1,6,Management,Developer,No,89,5,Management; Database Security,No,Job,Business & IT Management
+7.26,1,8,Management,Cloud Computing,No,65,4,Management; Data Science,Yes,Higher Studies,Cybersecurity & Networking
+6.89,3,5,Data Engineering,System Developer,No,65,3,Data Engineering; Data Science,No,Job,Software & Application Development
+7.67,5,2,Software Engineering,Business Process Analyst,No,89,3,Software Engineering; Web Technologies,Yes,Job,Data & Database Systems
+7.56,1,9,IoT,Security,No,79,3,IoT; Game Development,Yes,Job,Software & Application Development
+7.17,4,9,Management,Testing,Yes,69,2,Management; Cloud Computing,Yes,Job,Cybersecurity & Networking
+7.59,9,9,Software Engineering,Cloud Computing,Yes,66,2,Software Engineering; System Designing,No,Job,Software & Application Development
+7.64,1,1,Software Engineering,System Developer,Yes,79,1,Software Engineering; Web Technologies,No,Job,Cybersecurity & Networking
+7.72,8,9,Networks,Developer,No,91,0,Networks; Database Security,No,Higher Studies,Data & Database Systems
+7.87,6,3,Software Engineering,System Developer,No,94,4,Software Engineering; System Designing,No,Higher Studies,Business & IT Management
+7.99,8,3,Cloud Computing,Security,No,73,6,Cloud Computing; Web Technologies,Yes,Higher Studies,Business & IT Management
+8.06,2,1,Data Engineering,Cloud Computing,No,70,0,Data Engineering; Game Development,Yes,Job,Cloud & IT Infrastructure
+7.22,7,4,Cloud Computing,Business Process Analyst,No,62,4,Cloud Computing; Data Science,No,Job,Data & Database Systems
+7.98,2,1,Software Engineering,Cloud Computing,No,75,2,Software Engineering; Game Development,Yes,Higher Studies,Quality Assurance & Testing
+7.93,4,8,Programming,Cloud Computing,No,80,5,Programming; Data Science,No,Higher Studies,Business & IT Management
+7.91,5,4,Networks,Cloud Computing,No,88,1,Networks; Database Security,No,Job,Business & IT Management
+7.91,1,1,Networks,Cloud Computing,No,62,5,Networks; Cloud Computing,No,Job,UI/UX & Product Design
+7.76,9,8,IoT,Cloud Computing,Yes,89,2,IoT; Cloud Computing,Yes,Job,Cloud & IT Infrastructure
+7.36,6,4,Data Engineering,Developer,Yes,93,2,Data Engineering; Game Development,No,Job,Data & Database Systems
+7.08,7,6,Software Engineering,Testing,No,83,3,Software Engineering; Hacking,Yes,Job,Cloud & IT Infrastructure
+7.21,7,5,Management,Testing,No,64,4,Management; Database Security,No,Higher Studies,Data & Database Systems
+7.83,8,1,Cloud Computing,Security,No,65,2,Cloud Computing; System Designing,No,Job,Cybersecurity & Networking
+7.91,6,6,Data Engineering,System Developer,No,84,1,Data Engineering; System Designing,No,Job,Software & Application Development
+7.48,6,4,Networks,Cloud Computing,No,74,2,Networks; Database Security,No,Job,Cloud & IT Infrastructure
+7.80,8,6,Data Engineering,Testing,No,77,2,Data Engineering; System Designing,No,Higher Studies,Cloud & IT Infrastructure
+7.23,9,6,Management,Business Process Analyst,Yes,93,0,Management; Hacking,No,Job,Cloud & IT Infrastructure
+7.79,4,8,Networks,System Developer,Yes,92,4,Networks; Data Science,Yes,Job,Data & Database Systems
+7.94,3,5,Management,Business Process Analyst,No,76,3,Management; System Designing,Yes,Job,Business & IT Management
+8.02,3,5,Management,System Developer,Yes,70,4,Management; Database Security,No,Job,Cloud & IT Infrastructure
+8.43,9,8,Software Engineering,System Developer,No,64,3,Software Engineering; Database Security,Yes,Job,Data & Database Systems
+7.88,5,2,Hacking,Business Process Analyst,No,73,4,Hacking; Testing,Yes,Job,Cybersecurity & Networking
+8.31,6,7,Management,Testing,No,79,2,Management; Database Security,No,Higher Studies,Quality Assurance & Testing
+6.83,4,1,Data Engineering,Business Process Analyst,No,73,0,Data Engineering; Data Science,Yes,Higher Studies,Business & IT Management
+7.49,5,8,Networks,System Developer,Yes,87,3,Networks; Hacking,Yes,Higher Studies,UI/UX & Product Design
+8.08,7,7,Management,System Developer,Yes,60,3,Management; Testing,No,Job,Business & IT Management
+7.57,2,1,Programming,System Developer,No,84,4,Programming; System Designing,Yes,Higher Studies,Software & Application Development
+7.88,9,8,Cloud Computing,Cloud Computing,Yes,86,1,Cloud Computing; Testing,No,Higher Studies,Software & Application Development
+7.30,5,2,Programming,Testing,Yes,71,1,Programming; Game Development,Yes,Job,Software & Application Development
+7.64,4,9,Programming,System Developer,No,78,3,Programming; System Designing,No,Higher Studies,Cybersecurity & Networking
+7.73,8,2,Hacking,System Developer,Yes,66,5,Hacking; Hacking,No,Higher Studies,Cloud & IT Infrastructure
+7.88,3,1,Software Engineering,Testing,Yes,79,3,Software Engineering; System Designing,No,Job,Data & Database Systems
+7.20,4,7,Networks,System Developer,Yes,89,3,Networks; Testing,No,Higher Studies,Software & Application Development
+7.29,8,5,Data Engineering,Developer,No,88,3,Data Engineering; Game Development,Yes,Job,Software & Application Development
+7.77,5,9,Software Engineering,Cloud Computing,Yes,90,3,Software Engineering; Data Science,No,Higher Studies,Business & IT Management
+7.82,1,9,IoT,Business Process Analyst,Yes,76,3,IoT; Testing,Yes,Higher Studies,Data & Database Systems
+7.84,1,9,Parallel Computing,Business Process Analyst,No,78,2,Parallel Computing; Database Security,No,Higher Studies,Data & Database Systems
+7.94,2,9,Software Engineering,Testing,No,85,4,Software Engineering; Cloud Computing,Yes,Higher Studies,Business & IT Management
+7.78,6,8,Hacking,Business Process Analyst,Yes,61,3,Hacking; Game Development,No,Job,Software & Application Development
+7.56,8,4,Parallel Computing,Cloud Computing,Yes,62,5,Parallel Computing; Data Science,Yes,Job,Data & Database Systems
+7.83,8,1,Software Engineering,System Developer,No,68,2,Software Engineering; Data Science,No,Job,Cybersecurity & Networking
+8.60,5,9,Programming,System Developer,No,71,3,Programming; Hacking,No,Job,Quality Assurance & Testing
+7.63,1,5,Networks,Cloud Computing,Yes,82,2,Networks; Hacking,Yes,Higher Studies,Cloud & IT Infrastructure
+7.60,2,8,Cloud Computing,System Developer,Yes,61,4,Cloud Computing; Cloud Computing,No,Higher Studies,Business & IT Management
+7.90,2,2,Parallel Computing,Security,No,82,2,Parallel Computing; Testing,Yes,Higher Studies,Software & Application Development
+7.17,3,8,Networks,Cloud Computing,No,60,3,Networks; Testing,No,Job,Software & Application Development
+7.87,6,8,Management,Cloud Computing,No,74,3,Management; Hacking,No,Higher Studies,Software & Application Development
+7.67,6,6,Software Engineering,System Developer,Yes,91,5,Software Engineering; Data Science,No,Job,Data & Database Systems
+7.73,2,1,Cloud Computing,Business Process Analyst,No,94,1,Cloud Computing; System Designing,No,Higher Studies,Software & Application Development
+7.89,1,2,Management,Security,Yes,72,4,Management; Testing,No,Higher Studies,Software & Application Development
+8.22,2,8,Data Engineering,Security,Yes,75,1,Data Engineering; System Designing,Yes,Higher Studies,Data & Database Systems
+7.50,6,5,Hacking,Developer,Yes,60,5,Hacking; Web Technologies,No,Higher Studies,Data & Database Systems
+7.91,8,9,Data Engineering,Cloud Computing,Yes,89,4,Data Engineering; Data Science,Yes,Job,Cybersecurity & Networking
+7.47,5,4,Computer Architecture,Cloud Computing,Yes,65,2,Computer Architecture; Testing,No,Job,Cloud & IT Infrastructure
+8.18,1,4,IoT,Cloud Computing,Yes,90,2,IoT; Web Technologies,No,Job,Software & Application Development
+7.88,5,3,Parallel Computing,Cloud Computing,No,73,5,Parallel Computing; Hacking,Yes,Job,Cloud & IT Infrastructure
+7.68,2,2,Management,Developer,Yes,84,3,Management; Cloud Computing,No,Job,Business & IT Management
+7.30,7,2,Data Engineering,Cloud Computing,Yes,83,3,Data Engineering; Database Security,Yes,Higher Studies,Cloud & IT Infrastructure
+8.11,8,3,Software Engineering,Security,Yes,65,4,Software Engineering; Game Development,No,Job,UI/UX & Product Design
+7.87,3,9,Software Engineering,Cloud Computing,Yes,90,5,Software Engineering; Data Science,No,Job,Software & Application Development
+7.36,9,7,Cloud Computing,Cloud Computing,Yes,89,1,Cloud Computing; Data Science,No,Higher Studies,Software & Application Development
+7.79,8,1,Networks,Cloud Computing,No,93,2,Networks; Data Science,Yes,Job,Software & Application Development
+7.31,9,3,Programming,System Developer,No,62,2,Programming; Cloud Computing,No,Higher Studies,Software & Application Development
+8.09,3,2,Cloud Computing,System Developer,Yes,82,2,Cloud Computing; Game Development,No,Higher Studies,Business & IT Management
+7.87,2,8,Parallel Computing,Business Process Analyst,No,87,2,Parallel Computing; Testing,No,Higher Studies,Business & IT Management
+7.70,5,1,Data Engineering,System Developer,Yes,89,3,Data Engineering; Database Security,No,Higher Studies,Cybersecurity & Networking
+7.39,2,4,Programming,Business Process Analyst,No,93,1,Programming; Cloud Computing,No,Higher Studies,Business & IT Management
+7.72,7,9,Cloud Computing,Testing,No,70,2,Cloud Computing; Testing,Yes,Higher Studies,Quality Assurance & Testing
+7.28,2,4,Hacking,System Developer,No,82,2,Hacking; Testing,No,Higher Studies,Cybersecurity & Networking
+7.92,2,4,Management,System Developer,No,86,0,Management; Web Technologies,No,Higher Studies,Cybersecurity & Networking
+7.94,5,5,Programming,Security,Yes,89,3,Programming; Testing,No,Higher Studies,Data & Database Systems
+8.00,3,4,Cloud Computing,Business Process Analyst,Yes,83,2,Cloud Computing; System Designing,Yes,Job,Business & IT Management
+7.50,5,3,Hacking,Testing,Yes,77,3,Hacking; Web Technologies,No,Higher Studies,Data & Database Systems
+8.14,9,3,Parallel Computing,System Developer,Yes,91,2,Parallel Computing; Game Development,No,Higher Studies,Software & Application Development
+8.12,9,4,Management,System Developer,Yes,83,5,Management; Web Technologies,No,Job,Cybersecurity & Networking
+7.88,1,7,Hacking,System Developer,Yes,90,2,Hacking; Web Technologies,Yes,Higher Studies,Software & Application Development
+8.19,6,1,IoT,System Developer,Yes,80,2,IoT; System Designing,No,Higher Studies,Business & IT Management
+7.79,4,7,IoT,Business Process Analyst,No,61,2,IoT; Web Technologies,No,Job,Cybersecurity & Networking
+7.39,1,8,Computer Architecture,Cloud Computing,No,70,1,Computer Architecture; Cloud Computing,No,Job,Cloud & IT Infrastructure
+7.58,9,1,Computer Architecture,Business Process Analyst,No,79,2,Computer Architecture; Testing,No,Job,Cybersecurity & Networking
+7.92,9,4,Software Engineering,System Developer,No,86,1,Software Engineering; Data Science,No,Higher Studies,Cloud & IT Infrastructure
+7.98,9,5,Hacking,Testing,Yes,78,0,Hacking; Testing,No,Job,Software & Application Development
+7.38,5,8,Management,Security,Yes,64,1,Management; Testing,Yes,Higher Studies,Business & IT Management
+7.59,5,7,Computer Architecture,Business Process Analyst,No,62,0,Computer Architecture; Database Security,No,Job,Business & IT Management
+8.18,2,5,Parallel Computing,Developer,Yes,73,0,Parallel Computing; Hacking,No,Job,Data & Database Systems
+7.32,7,5,Software Engineering,Testing,No,74,4,Software Engineering; Hacking,Yes,Higher Studies,Cybersecurity & Networking
+8.12,2,4,Programming,Cloud Computing,No,87,2,Programming; Cloud Computing,No,Job,Data & Database Systems
+7.64,1,9,Hacking,Business Process Analyst,No,69,2,Hacking; Game Development,No,Higher Studies,Business & IT Management
+7.47,1,8,Hacking,Testing,Yes,73,4,Hacking; Testing,Yes,Job,Data & Database Systems
+8.03,2,1,Computer Architecture,Cloud Computing,No,83,1,Computer Architecture; Game Development,No,Job,Business & IT Management
+7.77,8,2,Software Engineering,Security,Yes,92,1,Software Engineering; Web Technologies,No,Higher Studies,Business & IT Management
+8.52,2,6,Hacking,Security,Yes,94,4,Hacking; Web Technologies,Yes,Job,Cloud & IT Infrastructure
+7.88,1,9,Computer Architecture,Security,No,92,2,Computer Architecture; Hacking,No,Higher Studies,Cybersecurity & Networking
+8.19,5,8,Programming,Cloud Computing,Yes,87,3,Programming; System Designing,No,Higher Studies,Data & Database Systems
+7.84,9,6,Hacking,Developer,No,74,5,Hacking; Web Technologies,No,Higher Studies,Business & IT Management
+7.53,3,5,IoT,Business Process Analyst,Yes,80,2,IoT; Game Development,Yes,Job,Business & IT Management
+8.03,1,1,Parallel Computing,Developer,Yes,87,2,Parallel Computing; System Designing,Yes,Job,Software & Application Development
+7.20,6,6,Networks,Business Process Analyst,No,72,3,Networks; Hacking,No,Job,Software & Application Development
+7.77,2,5,Management,Developer,Yes,92,3,Management; Cloud Computing,No,Job,Data & Database Systems
+7.82,2,3,IoT,Developer,No,78,3,IoT; Game Development,No,Higher Studies,Software & Application Development
+7.13,9,4,IoT,Developer,No,87,4,IoT; System Designing,No,Job,Business & IT Management
+7.39,5,5,Hacking,Cloud Computing,Yes,80,4,Hacking; Testing,No,Job,Software & Application Development
+7.56,4,3,Management,Cloud Computing,Yes,91,3,Management; Data Science,Yes,Higher Studies,UI/UX & Product Design
+7.89,3,4,Data Engineering,Business Process Analyst,Yes,71,4,Data Engineering; Game Development,No,Job,Business & IT Management
+7.56,1,2,Parallel Computing,Cloud Computing,Yes,74,0,Parallel Computing; System Designing,Yes,Job,Cloud & IT Infrastructure
+7.78,4,9,Computer Architecture,Testing,No,65,2,Computer Architecture; Game Development,Yes,Job,Business & IT Management
+7.82,4,4,Parallel Computing,System Developer,No,70,3,Parallel Computing; Database Security,No,Job,Cloud & IT Infrastructure
+7.23,6,9,Management,Security,Yes,68,5,Management; Database Security,No,Higher Studies,Business & IT Management
+6.89,5,3,IoT,Business Process Analyst,No,60,4,IoT; Hacking,No,Higher Studies,Business & IT Management
+7.30,7,8,Networks,Developer,No,77,2,Networks; Testing,No,Job,Business & IT Management
+7.53,1,8,Computer Architecture,Testing,Yes,69,1,Computer Architecture; System Designing,No,Job,Business & IT Management
+8.19,7,1,Parallel Computing,Security,No,75,5,Parallel Computing; Game Development,No,Higher Studies,Business & IT Management
+8.53,8,7,Parallel Computing,System Developer,No,84,0,Parallel Computing; Testing,No,Job,Business & IT Management
+7.33,5,2,Software Engineering,Cloud Computing,No,69,3,Software Engineering; Testing,Yes,Higher Studies,Business & IT Management
+7.83,3,4,Programming,Developer,Yes,81,3,Programming; Testing,No,Job,Data & Database Systems
+8.03,5,3,Hacking,Business Process Analyst,Yes,64,3,Hacking; Web Technologies,No,Job,Business & IT Management
+7.86,9,1,IoT,Cloud Computing,No,86,5,IoT; Game Development,Yes,Job,UI/UX & Product Design
+7.78,2,8,Networks,Security,Yes,87,6,Networks; Hacking,Yes,Job,Software & Application Development
+8.47,8,5,Hacking,Security,Yes,93,1,Hacking; Cloud Computing,Yes,Higher Studies,Data & Database Systems
+7.51,8,5,Networks,Developer,Yes,83,4,Networks; Hacking,No,Job,Cloud & IT Infrastructure
+7.71,3,1,Software Engineering,Security,No,62,0,Software Engineering; Cloud Computing,No,Higher Studies,Quality Assurance & Testing
+7.64,8,9,Computer Architecture,Developer,Yes,73,2,Computer Architecture; Testing,No,Higher Studies,Software & Application Development
+7.99,8,4,Hacking,System Developer,No,94,4,Hacking; Web Technologies,No,Higher Studies,Cybersecurity & Networking
+8.29,8,2,IoT,Testing,Yes,92,1,IoT; Data Science,Yes,Higher Studies,Cybersecurity & Networking
+7.14,6,8,Hacking,Security,Yes,68,3,Hacking; Game Development,No,Higher Studies,Data & Database Systems
+7.90,5,7,Computer Architecture,Developer,Yes,93,1,Computer Architecture; Testing,No,Job,Quality Assurance & Testing
+7.06,9,7,Computer Architecture,System Developer,No,61,2,Computer Architecture; Web Technologies,No,Job,Business & IT Management
+7.66,2,6,Parallel Computing,Cloud Computing,Yes,87,5,Parallel Computing; Data Science,No,Job,Cloud & IT Infrastructure
+8.22,1,9,Hacking,Security,Yes,83,0,Hacking; Cloud Computing,Yes,Job,Cloud & IT Infrastructure
+7.60,3,4,Programming,System Developer,No,68,1,Programming; Web Technologies,Yes,Higher Studies,Software & Application Development
+7.86,1,3,Computer Architecture,Cloud Computing,No,77,4,Computer Architecture; Hacking,No,Job,Cybersecurity & Networking
+6.89,2,5,IoT,Testing,No,68,5,IoT; Web Technologies,Yes,Job,Cloud & IT Infrastructure
+7.88,3,3,Data Engineering,Cloud Computing,No,87,2,Data Engineering; System Designing,Yes,Job,Data & Database Systems
+7.77,6,8,Management,Developer,Yes,86,4,Management; System Designing,No,Higher Studies,Cybersecurity & Networking
+7.86,3,9,IoT,Developer,Yes,87,1,IoT; Testing,Yes,Job,Software & Application Development
+7.80,4,2,IoT,Cloud Computing,Yes,67,5,IoT; Database Security,No,Job,Software & Application Development
+7.24,5,9,Management,System Developer,Yes,73,6,Management; Data Science,No,Job,Cloud & IT Infrastructure
+6.86,1,4,Software Engineering,Business Process Analyst,Yes,68,3,Software Engineering; Database Security,No,Higher Studies,Data & Database Systems
+7.39,9,2,Management,System Developer,No,66,2,Management; Testing,No,Higher Studies,Business & IT Management
+7.40,4,2,Data Engineering,System Developer,Yes,87,4,Data Engineering; System Designing,No,Higher Studies,Business & IT Management
+7.32,9,9,Programming,Cloud Computing,Yes,69,2,Programming; Game Development,No,Higher Studies,Cybersecurity & Networking
+8.40,5,3,Cloud Computing,Business Process Analyst,No,81,2,Cloud Computing; Database Security,Yes,Higher Studies,Software & Application Development
+8.06,7,9,Hacking,Business Process Analyst,Yes,71,5,Hacking; Cloud Computing,Yes,Job,Cloud & IT Infrastructure
