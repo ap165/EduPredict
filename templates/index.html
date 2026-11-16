@@ -152,13 +152,33 @@
               </div>
               <div class="field-group">
                 <label for="interested_subjects">Interested subjects <span>*</span></label>
-                <input id="interested_subjects" name="interested_subjects" type="text" placeholder="e.g. Programming" maxlength="160" required>
-                <small class="field-help">Enter the subject or subjects you enjoy.</small>
+                <select id="interested_subjects" name="interested_subjects" required>
+                  <option value="" selected disabled>Select an interested subject</option>
+                  <option value="Cloud Computing">Cloud Computing</option>
+                  <option value="Computer Architecture">Computer Architecture</option>
+                  <option value="Data Engineering">Data Engineering</option>
+                  <option value="Hacking">Hacking</option>
+                  <option value="IoT">IoT</option>
+                  <option value="Management">Management</option>
+                  <option value="Networks">Networks</option>
+                  <option value="Parallel Computing">Parallel Computing</option>
+                  <option value="Programming">Programming</option>
+                  <option value="Software Engineering">Software Engineering</option>
+                </select>
+                <small class="field-help">Choose the subject that best matches your interests.</small>
               </div>
               <div class="field-group">
                 <label for="career_area">Career area <span>*</span></label>
-                <input id="career_area" name="career_area" type="text" placeholder="e.g. Developer" maxlength="100" required>
-                <small class="field-help">Enter the career area that interests you.</small>
+                <select id="career_area" name="career_area" required>
+                  <option value="" selected disabled>Select a career area</option>
+                  <option value="Business Process Analyst">Business Process Analyst</option>
+                  <option value="Cloud Computing">Cloud Computing</option>
+                  <option value="Developer">Developer</option>
+                  <option value="Security">Security</option>
+                  <option value="System Developer">System Developer</option>
+                  <option value="Testing">Testing</option>
+                </select>
+                <small class="field-help">Choose the career area closest to your current preference.</small>
               </div>
               <div class="field-group">
                 <label for="can_work_long">Can work long hours? <span>*</span></label>
@@ -178,10 +198,41 @@
                 <input id="project_count" name="project_count" type="number" min="0" max="50" step="1" placeholder="e.g. 3" required>
                 <small class="field-help">Enter the number of projects you have completed.</small>
               </div>
-              <div class="field-group">
-                <label for="project_focus">Project focus <span>*</span></label>
-                <input id="project_focus" name="project_focus" type="text" placeholder="e.g. Programming; Web Technologies" maxlength="180" required>
-                <small class="field-help">List the main areas of your projects. Separate multiple areas with semicolons.</small>
+              <div class="field-group field-full">
+                <label>Project focus <span>*</span></label>
+                <div class="project-focus-grid">
+                  <div class="project-focus-field">
+                    <label for="project_focus_primary" class="subfield-label">Main project area</label>
+                    <select id="project_focus_primary" name="project_focus_primary" required>
+                      <option value="" selected disabled>Select the main area</option>
+                      <option value="Cloud Computing">Cloud Computing</option>
+                      <option value="Computer Architecture">Computer Architecture</option>
+                      <option value="Data Engineering">Data Engineering</option>
+                      <option value="Hacking">Hacking</option>
+                      <option value="IoT">IoT</option>
+                      <option value="Management">Management</option>
+                      <option value="Networks">Networks</option>
+                      <option value="Parallel Computing">Parallel Computing</option>
+                      <option value="Programming">Programming</option>
+                      <option value="Software Engineering">Software Engineering</option>
+                    </select>
+                  </div>
+                  <div class="project-focus-field">
+                    <label for="project_focus_secondary" class="subfield-label">Additional project area</label>
+                    <select id="project_focus_secondary" name="project_focus_secondary" required>
+                      <option value="" selected disabled>Select an additional area</option>
+                      <option value="Cloud Computing">Cloud Computing</option>
+                      <option value="Data Science">Data Science</option>
+                      <option value="Database Security">Database Security</option>
+                      <option value="Game Development">Game Development</option>
+                      <option value="Hacking">Hacking</option>
+                      <option value="System Designing">System Designing</option>
+                      <option value="Testing">Testing</option>
+                      <option value="Web Technologies">Web Technologies</option>
+                    </select>
+                  </div>
+                </div>
+                <small class="field-help">Choose both areas. They are combined in the format expected by the career model.</small>
               </div>
               <div class="field-group">
                 <label for="internship">Completed an internship? <span>*</span></label>
