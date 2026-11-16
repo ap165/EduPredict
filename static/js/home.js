@@ -111,7 +111,7 @@
       "Can Work Long": values.can_work_long,
       "Mathematics (%)": Number(values.mathematics_percentage),
       "Project Count": Number(values.project_count),
-      "Project Focus": values.project_focus.trim(),
+      "Project Focus": `${values.project_focus_primary}; ${values.project_focus_secondary}`,
       "Internship": values.internship,
       "Career Preference": values.career_preference
     };
