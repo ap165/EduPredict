@@ -1,8 +1,15 @@
+
 from flask import Blueprint, render_template, jsonify, request
 
-from services import predict_cgpa, predict_performance, predict_backlog
+from services import (
+    predict_cgpa,
+    predict_performance,
+    predict_backlog,
+    predict_career_path
+)
 
 api_routes = Blueprint("api", __name__)
+
 
 @api_routes.route("/")
 def home():
@@ -12,6 +19,7 @@ def home():
 @api_routes.route("/predictions/cgpa", methods=["POST"])
 def cgpa():
     data = request.get_json()
+
     try:
         prediction = predict_cgpa(data)
 
@@ -21,6 +29,7 @@ def cgpa():
                 "predicted_next_semester_cgpa": prediction
             }
         })
+
     except Exception as e:
         return jsonify({
             "success": False,
@@ -30,7 +39,6 @@ def cgpa():
 
 @api_routes.route("/predictions/performance", methods=["POST"])
 def performance():
-
     data = request.get_json()
 
     try:
@@ -52,7 +60,6 @@ def performance():
 
 @api_routes.route("/predictions/backlog-risk", methods=["POST"])
 def backlogRisk():
-
     data = request.get_json()
 
     try:
@@ -62,6 +69,27 @@ def backlogRisk():
             "success": True,
             "prediction": {
                 "backlog_status": prediction
+            }
+        })
+
+    except Exception as e:
+        return jsonify({
+            "success": False,
+            "error": str(e)
+        }), 400
+
+
+@api_routes.route("/predictions/career-path", methods=["POST"])
+def careerPath():
+    data = request.get_json()
+
+    try:
+        prediction = predict_career_path(data)
+
+        return jsonify({
+            "success": True,
+            "prediction": {
+                "recommended_career_path": prediction
             }
         })
 
