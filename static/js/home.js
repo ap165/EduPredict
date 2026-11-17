@@ -1,17 +1,42 @@
 (() => {
   "use strict";
 
+  // Theme preference defaults to System and is retained between visits.
+  const themeSelect = document.getElementById("theme-select");
+  const themeStorageKey = "edupredict-theme";
+  const validThemes = ["system", "light", "dark"];
+
+  function applyTheme(theme, persist = false) {
+    const selectedTheme = validThemes.includes(theme) ? theme : "system";
+    if (selectedTheme === "system") {
+      document.documentElement.removeAttribute("data-theme");
+    } else {
+      document.documentElement.setAttribute("data-theme", selectedTheme);
+    }
+    if (themeSelect) themeSelect.value = selectedTheme;
+    if (persist) {
+      try {
+        localStorage.setItem(themeStorageKey, selectedTheme);
+      } catch (error) {
+        console.warn("Unable to save theme preference:", error);
+      }
+    }
+  }
+
+  let savedTheme = "system";
+  try {
+    const storedTheme = localStorage.getItem(themeStorageKey);
+    if (validThemes.includes(storedTheme)) savedTheme = storedTheme;
+  } catch (error) {
+    console.warn("Unable to read theme preference:", error);
+  }
+  applyTheme(savedTheme);
+  if (themeSelect) themeSelect.addEventListener("change", () => applyTheme(themeSelect.value, true));
+
   const form = document.getElementById("prediction-form");
   if (!form) return;
 
   const $ = (id) => document.getElementById(id);
-  const predictButton = $("predict-button");
-  const formError = $("form-error");
-  const resultsGrid = $("results-grid");
-  const resultsState = $("results-state");
-  const resultsActions = $("results-actions");
-  const toast = $("toast");
-
   const endpointConfig = {
     cgpa: {
       path: "/api/v1/predictions/cgpa",
