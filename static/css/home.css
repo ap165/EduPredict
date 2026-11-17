@@ -612,10 +612,10 @@ h1, .panel-heading h2, .results-title-row h2 { color: var(--text); }
 :root[data-theme="dark"] .theme-toggle { background: #202B45; border-color: #354466; color: #C49AFF; }
 :root[data-theme="dark"] .theme-toggle .theme-icon-moon { color: #C49AFF; stroke: #C49AFF; }
 
-/* Keep each section heading inline; add breathing room below the divider. */
+/* Section rhythm: divider -> clear top gap -> inline heading -> compact field gap. */
 .form-section {
-  padding-top: 34px;
-  padding-bottom: 30px;
+  min-width: 0;
+  padding: 0 0 24px;
 }
 .form-section legend {
   display: flex;
@@ -624,7 +624,7 @@ h1, .panel-heading h2, .results-title-row h2 { color: var(--text); }
   flex-wrap: nowrap;
   gap: 14px;
   width: 100%;
-  margin: 0 0 34px;
+  margin: 24px 0 14px;
   padding: 0;
 }
 .form-section legend > span:last-child {
@@ -645,14 +645,11 @@ h1, .panel-heading h2, .results-title-row h2 { color: var(--text); }
   margin: 0;
   line-height: 1.45;
 }
-.form-grid { margin-top: 0; }
-.form-section + .form-section { padding-top: 34px; }
-.form-section + .form-section legend { margin-bottom: 34px; }
+.form-section .form-grid { margin-top: 0; }
+.form-section + .form-section { padding-top: 0; }
 @media (max-width: 620px) {
-  .form-section { padding-top: 28px; padding-bottom: 26px; }
-  .form-section legend { gap: 12px; margin-bottom: 30px; }
-  .form-section + .form-section { padding-top: 30px; }
-  .form-section + .form-section legend { margin-bottom: 30px; }
+  .form-section { padding-bottom: 22px; }
+  .form-section legend { gap: 12px; margin-top: 22px; margin-bottom: 12px; }
   .section-number { width: 40px; height: 40px; flex: 0 0 40px; border-radius: 11px; }
   .form-section legend > span:last-child { flex: 1 1 0; }
 }
