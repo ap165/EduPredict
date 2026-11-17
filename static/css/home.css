@@ -612,34 +612,47 @@ h1, .panel-heading h2, .results-title-row h2 { color: var(--text); }
 :root[data-theme="dark"] .theme-toggle { background: #202B45; border-color: #354466; color: #C49AFF; }
 :root[data-theme="dark"] .theme-toggle .theme-icon-moon { color: #C49AFF; stroke: #C49AFF; }
 
-/* Space section legends away from panel copy, dividers, and the first form field. */
+/* Keep each section heading inline; add breathing room below the divider. */
 .form-section {
-  padding-top: 28px;
+  padding-top: 34px;
   padding-bottom: 30px;
 }
 .form-section legend {
-  display: block;
-  float: none;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 14px;
   width: 100%;
-  margin: 0 0 30px;
+  margin: 0 0 34px;
   padding: 0;
 }
 .form-section legend > span:last-child {
   display: flex;
   min-width: 0;
+  flex: 1 1 auto;
   flex-direction: column;
   justify-content: center;
   gap: 5px;
 }
-.form-section legend strong { line-height: 1.35; }
-.form-section legend small { margin-top: 0; line-height: 1.45; }
+.form-section legend strong {
+  display: block;
+  margin: 0;
+  line-height: 1.35;
+}
+.form-section legend small {
+  display: block;
+  margin: 0;
+  line-height: 1.45;
+}
 .form-grid { margin-top: 0; }
-.form-section + .form-section { padding-top: 30px; }
-.form-section + .form-section legend { margin-bottom: 30px; }
+.form-section + .form-section { padding-top: 34px; }
+.form-section + .form-section legend { margin-bottom: 34px; }
 @media (max-width: 620px) {
-  .form-section { padding-top: 24px; padding-bottom: 26px; }
-  .form-section legend { margin-bottom: 26px; }
-  .form-section + .form-section { padding-top: 27px; }
-  .form-section + .form-section legend { margin-bottom: 26px; }
-  .section-number { width: 38px; height: 38px; border-radius: 11px; }
+  .form-section { padding-top: 28px; padding-bottom: 26px; }
+  .form-section legend { gap: 12px; margin-bottom: 30px; }
+  .form-section + .form-section { padding-top: 30px; }
+  .form-section + .form-section legend { margin-bottom: 30px; }
+  .section-number { width: 40px; height: 40px; flex: 0 0 40px; border-radius: 11px; }
+  .form-section legend > span:last-child { flex: 1 1 0; }
 }
