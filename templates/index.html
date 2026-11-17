@@ -6,7 +6,7 @@
   <meta name="description" content="EduPredict brings together academic performance, CGPA, backlog-risk, and career-path predictions in one simple form.">
   <meta name="theme-color" content="#f7f9fc">
   <title>EduPredict — Student Academic Insights</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}?v=2">
 </head>
 <body>
   <header class="site-header">
@@ -19,14 +19,17 @@
         </span>
       </a>
       <nav class="header-nav" aria-label="Main navigation">
-        <div class="theme-control">
-          <label class="theme-label" for="theme-select">Appearance</label>
-          <select id="theme-select" class="theme-select" aria-label="Choose colour theme">
-            <option value="system">System</option>
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
-          </select>
-        </div>
+        <button id="theme-toggle" class="theme-toggle" type="button"
+                aria-label="Switch to dark mode" aria-pressed="false"
+                title="Switch to dark mode">
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path>
+          </svg>
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M20.3 15.3A8.5 8.5 0 0 1 8.7 3.7 8.6 8.6 0 1 0 20.3 15.3Z"></path>
+          </svg>
+        </button>
         <span class="model-count"><span class="status-dot"></span> 4 prediction models</span>
         <a href="/api/v1/" class="docs-link">API documentation <span aria-hidden="true">↗</span></a>
       </nav>
@@ -334,6 +337,6 @@
   </main>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="{{ url_for('static', filename='js/home.js') }}" defer></script>
+  <script src="{{ url_for('static', filename='js/home.js') }}?v=2" defer></script>
 </body>
 </html>
