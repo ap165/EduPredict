@@ -573,3 +573,73 @@ h1, .panel-heading h2, .results-title-row h2 { color: var(--text); }
 :root[data-theme="dark"] .form-section legend strong,
 :root[data-theme="dark"] .panel-heading h2,
 :root[data-theme="dark"] .results-title-row h2 { color: #F5F6FC; }
+
+
+
+/* Theme toggle: keep the glyph itself visible in both color schemes. */
+.theme-toggle {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  background: var(--surface-soft);
+  color: var(--accent);
+  line-height: 0;
+  overflow: visible;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.theme-toggle .theme-icon {
+  display: none;
+  width: 21px;
+  height: 21px;
+  flex: 0 0 21px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  color: var(--accent);
+}
+:root[data-theme="light"] .theme-toggle .theme-icon-sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .theme-icon-moon { display: block; color: var(--accent); stroke: var(--accent); }
+.theme-toggle:hover { background: var(--accent-soft); border-color: var(--accent); }
+:root[data-theme="dark"] .theme-toggle { background: #202B45; border-color: #354466; color: #C49AFF; }
+:root[data-theme="dark"] .theme-toggle .theme-icon-moon { color: #C49AFF; stroke: #C49AFF; }
+
+/* Space section legends away from panel copy, dividers, and the first form field. */
+.form-section {
+  padding-top: 28px;
+  padding-bottom: 30px;
+}
+.form-section legend {
+  display: block;
+  float: none;
+  width: 100%;
+  margin: 0 0 30px;
+  padding: 0;
+}
+.form-section legend > span:last-child {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.form-section legend strong { line-height: 1.35; }
+.form-section legend small { margin-top: 0; line-height: 1.45; }
+.form-grid { margin-top: 0; }
+.form-section + .form-section { padding-top: 30px; }
+.form-section + .form-section legend { margin-bottom: 30px; }
+@media (max-width: 620px) {
+  .form-section { padding-top: 24px; padding-bottom: 26px; }
+  .form-section legend { margin-bottom: 26px; }
+  .form-section + .form-section { padding-top: 27px; }
+  .form-section + .form-section legend { margin-bottom: 26px; }
+  .section-number { width: 38px; height: 38px; border-radius: 11px; }
+}
