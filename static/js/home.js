@@ -1,19 +1,24 @@
 (() => {
   "use strict";
 
-  // Theme preference defaults to System and is retained between visits.
-  const themeSelect = document.getElementById("theme-select");
+  // Start in System mode. A click explicitly switches between Light and Dark.
+  // The selected appearance is stored so it remains consistent across visits.
+  const themeToggle = document.getElementById("theme-toggle");
   const themeStorageKey = "edupredict-theme";
-  const validThemes = ["system", "light", "dark"];
+  const mediaPreference = window.matchMedia("(prefers-color-scheme: dark)");
 
   function applyTheme(theme, persist = false) {
-    const selectedTheme = validThemes.includes(theme) ? theme : "system";
-    if (selectedTheme === "system") {
-      document.documentElement.removeAttribute("data-theme");
-    } else {
-      document.documentElement.setAttribute("data-theme", selectedTheme);
+    const selectedTheme = theme === "dark" ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", selectedTheme);
+    document.documentElement.style.colorScheme = selectedTheme;
+    if (themeToggle) {
+      const nextTheme = selectedTheme === "dark" ? "light" : "dark";
+      themeToggle.setAttribute("aria-label", `Switch to ${nextTheme} mode`);
+      themeToggle.setAttribute("title", `Switch to ${nextTheme} mode`);
+      themeToggle.setAttribute("aria-pressed", String(selectedTheme === "dark"));
     }
-    if (themeSelect) themeSelect.value = selectedTheme;
+    const themeColor = document.querySelector('meta[name="theme-color"]');
+    if (themeColor) themeColor.setAttribute("content", selectedTheme === "dark" ? "#0d1117" : "#f7f9fc");
     if (persist) {
       try {
         localStorage.setItem(themeStorageKey, selectedTheme);
@@ -26,13 +31,31 @@
   let savedTheme = "system";
   try {
     const storedTheme = localStorage.getItem(themeStorageKey);
-    if (validThemes.includes(storedTheme)) savedTheme = storedTheme;
+    if (storedTheme === "dark" || storedTheme === "light") savedTheme = storedTheme;
   } catch (error) {
     console.warn("Unable to read theme preference:", error);
   }
-  applyTheme(savedTheme);
-  if (themeSelect) themeSelect.addEventListener("change", () => applyTheme(themeSelect.value, true));
+  const initialTheme = savedTheme === "system" ? (mediaPreference.matches ? "dark" : "light") : savedTheme;
+  applyTheme(initialTheme);
 
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const currentlyDark = document.documentElement.getAttribute("data-theme") === "dark";
+      applyTheme(currentlyDark ? "light" : "dark", true);
+    });
+  }
+
+  // In the initial System mode, continue following OS changes until the visitor toggles manually.
+  let followSystemPreference = savedTheme === "system";
+  if (typeof mediaPreference.addEventListener === "function") {
+    mediaPreference.addEventListener("change", (event) => {
+      if (followSystemPreference) applyTheme(event.matches ? "dark" : "light");
+    });
+  } else if (typeof mediaPreference.addListener === "function") {
+    mediaPreference.addListener((event) => {
+      if (followSystemPreference) applyTheme(event.matches ? "dark" : "light");
+    });
+  }
   const form = document.getElementById("prediction-form");
   if (!form) return;
 
