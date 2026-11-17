@@ -6,7 +6,7 @@
   <meta name="description" content="EduPredict brings together academic performance, CGPA, backlog-risk, and career-path predictions in one simple form.">
   <meta name="theme-color" content="#F7F5FC">
   <title>EduPredict — Student Academic Insights</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}?v=7">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}?v=8">
 </head>
 <body>
   <header class="site-header">
@@ -65,7 +65,8 @@
 
         <form id="prediction-form" novalidate>
           <fieldset class="form-section">
-            <legend><span class="section-number">01</span><span><strong>Academic record</strong><small>Your previous results and attendance</small></span></legend>
+            <legend class="visually-hidden">Academic record. Your previous results and attendance.</legend>
+            <div class="form-section-heading" aria-hidden="true"><span class="section-number">01</span><span><strong>Academic record</strong><small>Your previous results and attendance</small></span></div>
             <div class="form-grid">
               <div class="field-group">
                 <label for="class_12_percentage">Class 12 percentage <span>*</span></label>
@@ -103,7 +104,8 @@
           </fieldset>
 
           <fieldset class="form-section">
-            <legend><span class="section-number">02</span><span><strong>Study habits & background</strong><small>Daily routine and background details</small></span></legend>
+            <legend class="visually-hidden">Study habits and background. Daily routine and background details.</legend>
+            <div class="form-section-heading" aria-hidden="true"><span class="section-number">02</span><span><strong>Study habits & background</strong><small>Daily routine and background details</small></span></div>
             <div class="form-grid">
               <div class="field-group">
                 <label for="study_time">Daily study / exam preparation <span>*</span></label>
@@ -149,7 +151,8 @@
           </fieldset>
 
           <fieldset class="form-section">
-            <legend><span class="section-number">03</span><span><strong>Career profile</strong><small>Skills, interests, projects, and preferences</small></span></legend>
+            <legend class="visually-hidden">Career profile. Skills, interests, projects, and preferences.</legend>
+            <div class="form-section-heading" aria-hidden="true"><span class="section-number">03</span><span><strong>Career profile</strong><small>Skills, interests, projects, and preferences</small></span></div>
             <div class="form-grid">
               <div class="field-group">
                 <label for="coding_rating">Coding rating <span>*</span></label>
