@@ -612,12 +612,24 @@ h1, .panel-heading h2, .results-title-row h2 { color: var(--text); }
 :root[data-theme="dark"] .theme-toggle { background: #202B45; border-color: #354466; color: #C49AFF; }
 :root[data-theme="dark"] .theme-toggle .theme-icon-moon { color: #C49AFF; stroke: #C49AFF; }
 
-/* Section rhythm: put the divider gap on the fieldset, not the special legend element. */
+/* Section headings use a normal-flow row; only the accessible label stays in legend. */
 .form-section {
+  position: relative;
   min-width: 0;
   padding: 24px 0 25px;
 }
-.form-section legend {
+.form-section > legend.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+.form-section-heading {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -627,7 +639,7 @@ h1, .panel-heading h2, .results-title-row h2 { color: var(--text); }
   margin: 0 0 34px;
   padding: 0;
 }
-.form-section legend > span:last-child {
+.form-section-heading > span:last-child {
   display: flex;
   min-width: 0;
   flex: 1 1 auto;
@@ -635,20 +647,22 @@ h1, .panel-heading h2, .results-title-row h2 { color: var(--text); }
   justify-content: center;
   gap: 5px;
 }
-.form-section legend strong {
+.form-section-heading strong {
   display: block;
   margin: 0;
+  color: var(--text);
   line-height: 1.35;
 }
-.form-section legend small {
+.form-section-heading small {
   display: block;
   margin: 0;
+  color: var(--muted);
   line-height: 1.45;
 }
 .form-section .form-grid { margin-top: 0; }
 @media (max-width: 620px) {
   .form-section { padding-top: 22px; padding-bottom: 22px; }
-  .form-section legend { gap: 12px; margin-bottom: 34px; }
+  .form-section-heading { gap: 12px; margin-bottom: 34px; }
   .section-number { width: 40px; height: 40px; flex: 0 0 40px; border-radius: 11px; }
-  .form-section legend > span:last-child { flex: 1 1 0; }
+  .form-section-heading > span:last-child { flex: 1 1 0; }
 }
