@@ -18,7 +18,7 @@
       themeToggle.setAttribute("aria-pressed", String(selectedTheme === "dark"));
     }
     const themeColor = document.querySelector('meta[name="theme-color"]');
-    if (themeColor) themeColor.setAttribute("content", selectedTheme === "dark" ? "#0d1117" : "#f7f9fc");
+    if (themeColor) themeColor.setAttribute("content", selectedTheme === "dark" ? "#080B14" : "#F7F5FC");
     if (persist) {
       try {
         localStorage.setItem(themeStorageKey, selectedTheme);
